@@ -1,0 +1,104 @@
+extends layout/minor
+include includes/indexSlider/index
+include includes/indexNew/index
+include includes/announces/index
+include includes/banners/index
+include includes/buttons/index
+
+block variables
+	-var title = 'Главная'
+
+block content
+	.container
+		main.content
+			.content__news
+				.news-slider
+					.news-slider__list
+						+indexSlider()
+						+indexSlider()
+						+indexSlider()
+						+indexSlider()
+
+				.news-list
+					.news-list__list
+						+indexNew()
+						+indexNew()
+						+indexNew()
+						+indexNew()
+					.news-list__show-more
+						a(href="#").news-list__link
+
+			.content__blocks
+				.announces
+					.announces__list
+						+announcesItem()
+						+announcesItem()
+						+announcesItem()
+					.announces__load-more
+						a(href="#").announces__link
+					.announces__show-more
+						a(href="#").announces__link
+				.announces
+					.announces__list
+						+announcesItem()
+						+announcesItem()
+						+announcesItem()
+					.announces__show-more
+						a(href="#").announces__link
+
+			.content__banners
+				.banners
+					.banners__list
+						+bannersItem()
+						+bannersItem()
+						+bannersItem()
+						+bannersItem()
+					.banners__slider
+						+bannersItem()
+						+bannersItem()
+						+bannersItem()
+						+bannersItem()
+						+bannersItem()
+						+bannersItem()
+						+bannersItem()
+						+bannersItem()
+
+		aside.sidebar
+			.sidebar__block
+				.important
+					h3.important__title Важное
+					.important__list
+						a(href="#").important__item
+						a(href="#").important__item
+						a(href="#").important__item
+						a(href="#").important__item
+						a(href="#").important__item
+						a(href="#").important__item
+
+			.sidebar__block
+				.buttons
+					.buttons__list
+						+buttonsItem()
+						+buttonsItem()
+						+buttonsItem()
+			
+			.sidebar__block
+				.buttons.buttons--small
+					.buttons__list
+						+buttonsItem()
+						+buttonsItem()
+						+buttonsItem()
+						+buttonsItem()
+						+buttonsItem()
+						+buttonsItem()
+
+
+	include ./modules/popup/popup
+	include ./modules/footer/footer
+	
+
+
+
+			
+
+	

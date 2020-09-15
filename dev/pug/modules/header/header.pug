@@ -1,0 +1,60 @@
+include ../../helpers/mixins.pug
+
+mixin header-link(href, name)
+    li(class!=attributes.class).menu__item
+        a.menu__link(href= href)= name
+
+mixin social-link(href, icon)
+    li(class!=attributes.class).social__item
+        a.social__link(href= href)= icon
+
+
+header.header
+    .header__top
+        .container
+            .header__wrapper
+                .header__left
+                    .time Пятница, 04 сентября 2020
+                .header__right
+                    .poor-vision 
+                        i.fas.fa-glasses
+                        a(href="#") Версия для слабовидящих
+                    .social
+                        ul.social__list
+                            +social-link('#', 'icon')  
+                            +social-link('#', 'icon')  
+                            +social-link('#', 'icon')  
+                            +social-link('#', 'icon')  
+                    .subscribe
+                        button.subscribe__button Подписаться на новости
+    .header__bottom
+        .container
+            .header__wrapper
+                .logo
+                    a(href="/")
+                        img(src= imgroot + "common/logo.png" alt="")
+                        span МУНИЦИПАЛЬНОЕ ОБРАЗОВАНИЕ ЗЕЛЕНОГРАДСКИЙ ГОРОДСКОЙ ОКРУГ
+                .header__nav
+                    .menu-mobile
+                        span Меню
+                        .header-burger
+                            .header-burger-line
+                            .header-burger-line
+                            .header-burger-line
+                    nav.menu
+                        .header-nav__close-m
+                            .header-nav__close-m-item
+                            .header-nav__close-m-item
+                        ul.menu__list
+                            +header-link("/", "Главная")
+                            +header-link("./catalog.html", "Препараты")
+                            +header-link("./company.html", "Компания")
+                            +header-link("./blog.html", "Пресс-центр")
+                            +header-link("./contacts.html", "Контакты")
+                .header__search
+                    .search
+                        input.search__input
+                        button.search__button
+                .header__login
+                    button.btn.login Войти
+                    
