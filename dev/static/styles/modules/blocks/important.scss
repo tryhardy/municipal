@@ -1,0 +1,30 @@
+.important {
+    &__title {
+        font-size: $medium;
+        margin-bottom: $marginStandart;
+        text-align: center;
+    }
+
+    &__item {
+        display:block;
+        background-color: $white;
+        margin-bottom: $marginStandart;
+        padding: 20px 10px;
+        display:flex;
+        align-items: center;
+
+        i {
+            margin-right:$marginSmall;
+            font-size:16px;
+            display: block;
+        }
+
+        span {
+            display: block;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

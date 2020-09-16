@@ -1,0 +1,65 @@
+.btn {
+    padding:10px 35px;
+    border: 0;
+    background-color:$blue;
+    color:$white; 
+    border-radius:25px;
+    transition: .3s;
+
+    &:hover {
+        box-shadow: $shadow;
+    }
+}
+
+.search__button {
+    border: 0;
+    background-color: transparent;
+}
+
+.buttons {
+    &__item {
+        background: $gradient;
+        padding: 4px;
+        margin-bottom: $marginStandart;
+
+        a {
+            display:flex;
+            align-items:center;
+            background-color: $white;
+            padding: $marginStandart;
+        }
+    }
+
+    &__icon {
+        margin-right:$marginSmall;
+    }
+
+    &--small {
+        .buttons__item {
+            background: transparent;
+            width:50%;
+            padding: 0;
+
+            &:nth-child(2n){
+                padding-left: 10px;
+            }
+
+            &:nth-child(2n+1){
+                padding-right: 10px;
+            }
+        }
+        a {
+            display:block;
+            height:100%;
+        }
+
+        .buttons__icon {
+            margin-bottom: $marginStandart;
+        }
+
+        .buttons__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

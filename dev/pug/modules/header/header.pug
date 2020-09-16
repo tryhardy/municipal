@@ -4,29 +4,33 @@ mixin header-link(href, name)
     li(class!=attributes.class).menu__item
         a.menu__link(href= href)= name
 
-mixin social-link(href, icon)
+mixin social-link(href, icon, text)
     li(class!=attributes.class).social__item
-        a.social__link(href= href)= icon
+        a.social__link(href= href)
+            i(class=icon)
+            if(text)
+                span= text
 
 
 header.header
     .header__top
         .container
-            .header__wrapper
+            .header__wrapper.header__wrapper--no-grid
                 .header__left
                     .time Пятница, 04 сентября 2020
                 .header__right
                     .poor-vision 
-                        i.fas.fa-glasses
-                        a(href="#") Версия для слабовидящих
+                        a(href="#")
+                            i.fas.fa-glasses
+                            span Версия для слабовидящих
+
                     .social
                         ul.social__list
-                            +social-link('#', 'icon')  
-                            +social-link('#', 'icon')  
-                            +social-link('#', 'icon')  
-                            +social-link('#', 'icon')  
-                    .subscribe
-                        button.subscribe__button Подписаться на новости
+                            +social-link('#', 'fab fa-facebook-f')  
+                            +social-link('#', 'fab fa-instagram')  
+                            +social-link('#', 'fab fa-youtube')  
+                            +social-link('#', 'fas fa-envelope', "Подписаться на новости")  
+
     .header__bottom
         .container
             .header__wrapper
@@ -42,7 +46,7 @@ header.header
                             .header-burger-line
                             .header-burger-line
                     nav.menu
-                        .header-nav__close-m
+                        .menu-mobile__close-m
                             .header-nav__close-m-item
                             .header-nav__close-m-item
                         ul.menu__list
@@ -51,10 +55,12 @@ header.header
                             +header-link("./company.html", "Компания")
                             +header-link("./blog.html", "Пресс-центр")
                             +header-link("./contacts.html", "Контакты")
-                .header__search
-                    .search
-                        input.search__input
-                        button.search__button
-                .header__login
-                    button.btn.login Войти
+                .header__block
+                    .header__search
+                        .search
+                            input(placeholder="Найти").search__input
+                            button.search__button
+                                i.fas.fa-search
+                    .header__login
+                        button.btn.login Войти
                     

@@ -1,0 +1,32 @@
+.menu {
+    width: 100%;
+}
+.menu__list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu__item {
+    margin-right:$marginStandart;
+
+    &:last-child {
+        margin-right:0;
+    }
+}
+
+.menu__link {
+    color:$black;
+    transition:.3s;
+
+    &:hover {
+        color:$blue;
+    }
+}
+
+.menu-mobile {
+    display:none;
+
+    &__close-m {
+        display:none;
+    }
+}

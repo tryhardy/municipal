@@ -1,6 +1,8 @@
 .social {
+
     &__list {
         display:flex;
+        align-items: center;
     }
 
     &__item {
@@ -8,6 +10,20 @@
 
         &:last-child {
             margin-right:0;
+        }
+    }
+
+    &__link {
+        color:black;
+        display: block;
+        display:flex;
+        align-items: center;
+
+        i {
+            font-size:22px;
+        }
+        span {
+            margin-left:15px;
         }
     }
 }

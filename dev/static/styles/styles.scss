@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "utils/libs";
 @import "utils/vars";
 @import "utils/mixins";
@@ -7,17 +8,19 @@
 //@include sprites($spritesheet-sprites);
 
 html {
-  font-family: 'Gotham Pro', Arial, serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   height: 100%;
   background-color: $bg;
 }
 
 body {
+  font-family: 'Roboto', Arial, sans-serif;
   height: 100%;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: inherit;
 }
 
 *,
@@ -76,7 +79,39 @@ button { outline: none; }
   padding: 0 15px;
 }
 
+a {
+  transition:.3s;
+  color:$black;
 
+  &:hover {
+    color:$blue;
+    text-decoration: none;
+  }
+}
+
+i {
+  font-size: $iconSize;
+}
+
+button {
+  &:focus {
+    outline:none;
+  }
+}
+.content__blocks {
+  margin-bottom:$marginMedium;
+
+  .row > div{
+    padding-right:5px;
+
+    &:last-child {
+      padding-right:15px;
+    }
+  }
+}
+main {
+  margin-top: $marginStandart
+}
 
 //Модули
 @import "modules/modules";

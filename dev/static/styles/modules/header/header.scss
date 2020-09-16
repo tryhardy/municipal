@@ -1,7 +1,19 @@
 .header {
+    z-index: 9999;
+    
     &__wrapper {
-        display:flex;
-    }
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: $marginStandart;
+        grid-template-areas: "logo logo menu menu menu right";
+        position: relative;
+        
+
+        &--no-grid{
+            display:flex;
+        }
+    } 
     &__top {
         padding: 20px 0;
     }
@@ -12,5 +24,33 @@
     &__right {
         display:flex;
         flex: 1;
+    }
+    &__nav {
+        grid-area: menu;
+    }
+    &__block {
+        grid-area: right;
+    } 
+    &__nav {
+        display:flex;
+        align-items: center;
+    }
+    &__bottom {
+        box-shadow:$shadow;
+        background-color: $white;
+        padding:10px 0;
+    }
+    &__block {
+        display:flex;
+    }
+
+    &__search {
+        display:flex;
+        align-items: center;
+    }
+
+    &__login {
+        display:flex;
+        align-items: center;
     }
 }

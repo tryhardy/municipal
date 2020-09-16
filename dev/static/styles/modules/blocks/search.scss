@@ -1,0 +1,31 @@
+.search {
+    display: flex;
+    
+    &__button {
+        cursor: pointer;
+        margin: 0 $marginStandart;
+        
+        i {
+            transition: .3s;
+            &:hover {
+                color:$blue;
+            }
+        }
+    }
+    &__input {
+        border: 0;
+        border-bottom: 1px solid $lightgray;
+        padding:15px 0;
+        position: absolute;
+        right: 15%;
+        top: 0;
+        bottom:0;
+        width:0%;
+        transition: width .3s;
+
+        &--active {
+            width: 85%;
+            padding:15px;
+        }
+    }
+}

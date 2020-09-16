@@ -4586,4 +4586,71 @@
  .fas {
    font-family: 'Font Awesome 5 Free';
    font-weight: 900; }
+
+
+  @font-face {
+    font-family: 'golos';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../fonts/golos/Golos Text_Regular/Golos Text_Regular.eot");
+    src:  url("../fonts/golos/Golos Text_Regular/Golos Text_Regular.eot?#iefix") format("embedded-opentype"), 
+          url("../fonts/golos/Golos Text_Regular/Golos Text_Regular.woff2") format("woff2"), 
+          url("../fonts/golos/Golos Text_Regular/Golos Text_Regular.woff") format("woff"), 
+          url("../fonts/golos/Golos Text_Regular/Golos Text_Regular.ttf") format("truetype"), 
+          url("../fonts/golos/Golos Text_Regular/Golos Text_Regular.svg") format("svg"); 
+  }
+
+  @font-face {
+    font-family: 'golos';
+    font-style: normal;
+    font-weight: 500;
+    font-display: block;
+    src:  url("../fonts/golos/Golos Text_Medium/Golos Text_Medium.eot");
+    src:  url("../fonts/golos/Golos Text_Medium/Golos Text_Medium.eot?#iefix") format("embedded-opentype"), 
+          url("../fonts/golos/Golos Text_Medium/Golos Text_Medium.woff2") format("woff2"), 
+          url("../fonts/golos/Golos Text_Medium/Golos Text_Medium.woff") format("woff"), 
+          url("../fonts/golos/Golos Text_Medium/Golos Text_Medium.ttf") format("truetype"), 
+          url("../fonts/golos/Golos Text_Medium/Golos Text_Medium.svg") format("svg"); 
+  }
+
+  @font-face {
+    font-family: 'golos';
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src:  url("../fonts/golos/Golos Text_DemiBold/Golos Text_DemiBold.eot");
+    src:  url("../fonts/golos/Golos Text_DemiBold/Golos Text_DemiBold.eot?#iefix") format("embedded-opentype"), 
+          url("../fonts/golos/Golos Text_DemiBold/Golos Text_DemiBold.woff2") format("woff2"), 
+          url("../fonts/golos/Golos Text_DemiBold/Golos Text_DemiBold.woff") format("woff"), 
+          url("../fonts/golos/Golos Text_DemiBold/Golos Text_DemiBold.ttf") format("truetype"), 
+          url("../fonts/golos/Golos Text_DemiBold/Golos Text_DemiBold.svg") format("svg"); 
+  }
+
+  @font-face {
+    font-family: 'golos';
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+    src:  url("../fonts/golos/Golos Text_Bold/Golos Text_Bold.eot");
+    src:  url("../fonts/golos/Golos Text_Bold/Golos Text_Bold.eot?#iefix") format("embedded-opentype"), 
+          url("../fonts/golos/Golos Text_Bold/Golos Text_Bold.woff2") format("woff2"), 
+          url("../fonts/golos/Golos Text_Bold/Golos Text_Bold.woff") format("woff"), 
+          url("../fonts/golos/Golos Text_Bold/Golos Text_Bold.ttf") format("truetype"), 
+          url("../fonts/golos/Golos Text_Bold/Golos Text_Bold.svg") format("svg"); 
+  }
+
+  @font-face {
+    font-family: 'golos';
+    font-style: normal;
+    font-weight: 800;
+    font-display: block;
+    src:  url("../fonts/golos/Golos Text_Black/Golos Text_Black.eot");
+    src:  url("../fonts/golos/Golos Text_Black/Golos Text_Black.eot?#iefix") format("embedded-opentype"), 
+          url("../fonts/golos/Golos Text_Black/Golos Text_Black.woff2") format("woff2"), 
+          url("../fonts/golos/Golos Text_Black/Golos Text_Black.woff") format("woff"), 
+          url("../fonts/golos/Golos Text_Black/Golos Text_Black.ttf") format("truetype"), 
+          url("../fonts/golos/Golos Text_Black/Golos Text_Black.svg") format("svg"); 
+  }
+ 
  

@@ -1,0 +1,20 @@
+.logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+
+    a {
+        display: flex;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-width:50px;
+    }
+    span {
+        margin-left:$marginSmall;
+        font-size:$base;
+        color: black;
+    }
+}

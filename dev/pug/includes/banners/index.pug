@@ -1,4 +1,11 @@
 mixin bannersItem()
-    .banners__item
-        .banners__title Портал государственных услуг
-        a(href="#").banners__link
+    .banners__item.col-12.col-lg-3.col-md-6
+        .banners__content
+            .banners__title Портал государственных услуг
+            a(href="#").banners__link gosuslugi.ru
+
+    mixin bannersItemWithoutBootstrap()
+        .banners__item
+            .banners__content
+                .banners__title Портал государственных услуг
+                a(href="#").banners__link gosuslugi.ru

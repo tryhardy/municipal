@@ -1,0 +1,50 @@
+.footer {
+    background-color: $darkgray;
+    color: $white;
+    padding: $smallPaddingV;
+    font-size: $small;
+
+    &__wrapper {
+        display: grid;
+        grid-template-rows: repeat(3, min-content);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 $marginMedium;
+        grid-template-areas: 
+        "left center right"
+        "left center right"
+        "left center right";
+        position: relative;
+
+        &--no-grid{
+            display:flex;
+        }
+    }
+
+    &__left {
+        grid-area: left;
+        display: flex;
+        align-items: center;
+        
+        a{
+            display: block;
+            margin-right:$marginSmall;
+
+            img {
+                width:100%;
+                height:auto;
+                max-width: 75px;
+                min-width: 75px;
+            }
+        }
+    }
+    &__center {
+        grid-area: center;
+        display: flex;
+        align-items: center;
+    }
+    &__right {
+        grid-area: right;
+        display: flex;
+        align-items: center;
+    }
+}
