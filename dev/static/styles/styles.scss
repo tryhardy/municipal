@@ -113,5 +113,13 @@ main {
   margin-top: $marginStandart
 }
 
+input {
+  width:100%;
+  padding:10px;
+  border: 0;
+  box-shadow: $shadow;
+  margin-bottom: $marginStandart;
+}
+
 //Модули
 @import "modules/modules";

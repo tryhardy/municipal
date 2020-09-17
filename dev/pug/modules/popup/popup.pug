@@ -6,9 +6,11 @@
             .popup__close-line
         .popup__content
             .popup__title
-                form.subscribe
-                    i.far.fa-envelope
-                    p.subscribe__title Новостная рассылка
+                i.far.fa-envelope
+                p.subscribe__title Новостная рассылка
+            form.subscribe
+                label.subscribe__label(for="email") 
+                    span Ваш email
                     input#email(type="email", name="email")
-                    button.subscribe__submit(type="submit") Получать новости
-                    p.subscribe__info Текст с информацией о рассылке
+                button.btn.subscribe__submit(type="submit") Получать новости
+                p.subscribe__info Текст с информацией о рассылке
