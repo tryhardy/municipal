@@ -1,0 +1,48 @@
+extends layout/minor
+include includes/indexSlider/index
+include includes/indexNew/index
+include includes/announces/index
+include includes/banners/index
+include includes/buttons/index
+
+mixin newsItem()
+	a(href="#")
+		.news__item
+			.news__item-wrapper
+				.news__date 
+					span.date 19 июля 2019, 
+					span.time 12:29
+				.news__title Антон Алиханов встретится с участниками «Балтийского Артека»
+				.news__desc В понедельник, 22 июля, губернатор Калининградской области посетит всероссийский молодёжный образовательный форум. 
+					span.news__continue ..
+
+block variables
+	-var title = 'Главная'
+
+block content
+	.container
+		.tabs
+			ul.tabs__list
+				- var tabs = ['Анонсы', 'Объявления']
+				li().tabs__item.tabs__item--active 
+					a(href="#") Новости
+				each item, index in tabs
+					li(data-tab=n++).tabs__item
+						a(href="#")= item
+		.news
+			.news__list
+				- var n=0
+				while n<20
+					- n++
+					+newsItem()
+
+		.navigation
+
+						
+	
+
+
+
+			
+
+	

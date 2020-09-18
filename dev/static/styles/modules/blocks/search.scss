@@ -1,9 +1,11 @@
 .search {
     display: flex;
+    transition:all .3s;
     
     &__button {
         cursor: pointer;
         margin: 0 $marginStandart;
+        transition:all .3s;
         
         i {
             transition: .3s;
@@ -22,10 +24,36 @@
         bottom:0;
         width:0%;
         transition: width .3s;
+        transition:left .3s;
+    }
+}
 
-        &--active {
-            width: 85%;
-            padding:15px;
+.active.search {
+
+    .search__input {
+        margin-top: 10px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 100%;
+        max-width: 100%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        background-color: #ffffff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding: 30px 20px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .search__button {
+
+        i {
+            color: #ccc;
         }
     }
 }

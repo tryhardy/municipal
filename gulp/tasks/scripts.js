@@ -4,11 +4,17 @@ const uglify = require('gulp-uglify');
 const eslint = require('gulp-eslint');
 const argv = require('yargs').argv;
 const gulpif = require('gulp-if');
+var concat = require('gulp-concat');
+
+
+const scripts = [
+  'node_modules/jquery/dist/jquery.min.js',
+  'dev/static/js/*.js'
+];
 
 // Работа со скриптами
-
 module.exports = function script() {
-  return gulp.src('dev/static/js/*.js')
+  return gulp.src(scripts)
     // .pipe(eslint())
     // .pipe(eslint.format())
     .pipe(babel({

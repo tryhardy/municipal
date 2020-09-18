@@ -110,7 +110,8 @@ button {
   }
 }
 main {
-  margin-top: $marginStandart
+  margin-top: $marginStandart;
+  flex:1;
 }
 
 input {

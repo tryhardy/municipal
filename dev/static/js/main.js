@@ -1,51 +1,52 @@
-// Выбор активной вкладки в хедере
+/*нажатие на кнопку поиска*/
 (function () {
-    const url = window.location.href;
-    const navLinks = document.querySelectorAll(".header-menu__item");
-    navLinks.forEach(item => {
-        const link = item.querySelector('.header-menu__link');
-        if (url === link.href) {
-            item.classList.add('header-menu__item--active');
+    let searchBtn = $('.search__button');
+    $('.search').on('submit', function(e){
+        e.preventDefault();
+        
+        if(searchBtn.attr('data-status') == 'open') {
+            $('.search').addClass('active');
+            searchBtn.attr('data-status', 'find');
+        } else if (searchBtn.attr('data-status') == 'find') {
+            let formData = $(this).serialize();
+            window.location.href = '/search/?'+formData;
+        }
+    });
+
+    $('body').keydown(function(e) {
+        if (e.keyCode == 27 && $('.search').hasClass('active')) {
+            $('.search').removeClass('active');
+            searchBtn.attr('data-status', 'open');
+        }
+    });
+
+    $('body').on('click', function(e){
+        if(e.target === $('.header__search') || e.target === $('.search__input')) {
+            console.log(e.target);
         }
     });
 })();
 
-// Mobile Header
-const headerBurger = document.querySelector('.header-menu-mobile');
-const closeHeaderNav = document.querySelector('.header-nav-close-mobile');
-const headerNav = document.querySelector('nav.header-nav');
-headerBurger.addEventListener('click', () => {
-    headerNav.classList.add('header-nav-mobile--shown')
-})
+/*Подписка на новости*/
+(function () {
+    $("#sendmail").on('click', function(e){
+        e.preventDefault();
+        $('.popup').addClass('active');
+    });
 
-closeHeaderNav.addEventListener('click', () => {
-    headerNav.classList.remove('header-nav-mobile--shown')
-})
+    $('.popup__close').on('click', function(e){
+        e.preventDefault();
+        $('.popup').removeClass('active');
+    });
 
-// Выбор фильтров на /catalog
-const filterList = document.querySelectorAll('.filters-list .filter-item');
-filterList.forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('filter-item--active');
-    })
-})
+    $('.overlay').on('click', function(e){
+        e.preventDefault();
+        $('.popup').removeClass('active');
+    });
 
-// Переключение между категориями в /catalog-item
-const catalogTabs = document.querySelectorAll('.catalog-tab');
-const catalogBlocks = document.querySelectorAll('.drug-about-content');
-catalogTabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-        let p = e.target.closest('.catalog-tab');
-        for (let k = 0; k < catalogTabs.length; k++) {
-            catalogTabs[k].classList.remove('catalog-tab--active');
+    $('body').keydown(function(e) {
+        if (e.keyCode == 27 && $('.popup').hasClass('active')) {
+            $('.popup').removeClass('active');
         }
-        p.classList.add('catalog-tab--active');
-        const index = p.dataset.tab;
-        catalogBlocks.forEach(block => {
-            block.classList.remove('drug-about-content--shown');
-            if (index == block.dataset.tab) {
-                block.classList.add("drug-about-content--shown");
-            }
-        })
-    })
-})
+    });
+})();

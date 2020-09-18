@@ -14,7 +14,13 @@
     }
     span {
         margin-left:$marginSmall;
-        font-size:$base;
+        font-size:$small;
         color: black;
+        display: flex;
+        align-items: center;
+
+        @include desktopHd {
+            display: none;
+        }
     }
 }

@@ -1,0 +1,42 @@
+.news {
+    a {
+        color:$black;
+        &:hover {
+            color:$black;
+        }
+    }
+
+    &__item {
+        padding: $marginStandart;
+        margin-bottom: 10px;
+        background-color:$white;  
+        box-shadow: $shadow;  
+    }
+
+    &__date {
+        margin-bottom: $marginStandart;
+        font-size: $small;
+        color: $mediumgray;
+
+        span {
+            font-size: inherit;
+            color: inherit;
+        }
+    }
+
+    &__title {
+        margin-bottom: $marginStandart;
+    }
+
+    &__desc {
+        font-weight: 300;
+        margin-bottom: $marginStandart;
+    }
+
+    &__continue {
+        font-size: 28px;
+        line-height: 0;
+        font-weight: 500;
+        color: $blue;
+    }
+}

@@ -1,0 +1,39 @@
+.tabs {
+    margin:auto;
+    margin-bottom:$marginMedium;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        a {
+            display:block;
+            padding:10px 40px;
+            border:1px solid $blue;
+            border-right: 0;
+            color: $blue;
+        }
+
+        &:first-child {
+                a {
+                    border-radius: 30px 0 0 30px;
+                }
+        }
+
+        &:last-child {
+            a {
+                border:1px solid $blue;
+                border-radius: 0 30px 30px 0;
+            }
+        }
+
+        &--active {
+            a {
+                background-color: $blue;
+                color:$white;
+            }
+        }
+    }
+}

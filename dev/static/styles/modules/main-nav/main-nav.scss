@@ -1,5 +1,9 @@
 .menu {
     width: 100%;
+
+    @include desktop {
+        display:none;
+    }
 }
 .menu__list {
     display: flex;
@@ -12,15 +16,39 @@
     &:last-child {
         margin-right:0;
     }
+
+    &:hover {
+        .menu__link {
+            color:$blue;
+        }
+
+        .menu__submenu-list{
+            display: block;
+            position: absolute;
+            z-index: -1;
+            padding: 30px;
+            margin-left: -30px;
+            background-color: white;
+            padding-top: 50px;
+            box-shadow: $shadow;
+        }
+    }
 }
 
 .menu__link {
     color:$black;
     transition:.3s;
+    position: relative;
 
-    &:hover {
-        color:$blue;
+    &:after {
+        content: '';
+        position: absolute;
+        top: -$marginStandart;
+        left: -$marginStandart;
+        right: -$marginStandart;
+        bottom: -30px;
     }
+
 }
 
 .menu-mobile {
@@ -28,5 +56,63 @@
 
     &__close-m {
         display:none;
+
+        @include desktop {
+            display:block;
+        }
+    }
+
+    @include desktop {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+}
+
+.menu__submenu-list {
+    display: none;
+}
+
+.menu__submenu-link {
+    display: block;
+    padding: $marginStandart 0;
+}
+
+@include desktop {
+    .header-burger {
+        width: 25px;
+        height: 20px;
+        margin-left:$marginSmall;
+        position: relative;
+
+        &-line {
+            width: 100%;
+            height: 3px;
+            background-color: black;
+            position: absolute;
+
+            &:first-child {
+                top:0;
+            }
+            &:nth-child(2) {
+                top:50%;
+                transform:translateY(-50%);
+            }
+            &:last-child {
+                bottom:0;
+            }
+        }
+    }
+
+    .active.menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: white;
     }
 }
