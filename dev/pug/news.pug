@@ -7,37 +7,50 @@ include includes/buttons/index
 
 mixin newsItem()
 	a(href="#")
-		.news__item
-			.news__item-wrapper
-				.news__date 
+		.news-pics__item
+			.news-pics__item-wrapper
+				.news-pics__img
+					img(src='/static/images/content/company-image2.png')
+				.news-pics__date 
 					span.date 19 июля 2019, 
 					span.time 12:29
-				.news__title Антон Алиханов встретится с участниками «Балтийского Артека»
-				.news__desc В понедельник, 22 июля, губернатор Калининградской области посетит всероссийский молодёжный образовательный форум. 
-					span.news__continue ..
+				.news-pics__title Антон Алиханов встретится с участниками «Балтийского Артека»
+				.news-pics__desc Как сообщили в министерстве природных ресурсов и экологии Калининградской области, проверки садовых некоммерческих товариществ на предмет соблюдения требований к организации водоотведения проведут контрольно-надзорные органы.
 
 block variables
 	-var title = 'Главная'
 
 block content
 	.container
-		.tabs
-			ul.tabs__list
-				- var tabs = ['Анонсы', 'Объявления']
-				li().tabs__item.tabs__item--active 
-					a(href="#") Новости
-				each item, index in tabs
-					li(data-tab=n++).tabs__item
-						a(href="#")= item
-		.news
-			.news__list
-				- var n=0
-				while n<20
-					- n++
-					+newsItem()
+		.row
+			.left-sidebar.col-lg-3
+			.page-content.col-lg-8
+		
+				.tabs
+					ul.tabs__list
+						li().tabs__item.tabs__item--active 
+							a(href="/news.html") Новости
+						li().tabs__item
+							a(href="/announces.html") Анонсы
+						li().tabs__item
+							a(href="/announces.html") Объявления
+				.news-pics
+					.news-pics__list
+						- var n=0
+						while n<10
+							- n++
+							+newsItem()
 
-		.navigation
+				.navigation
+					.news-nav__load-more
+						a(href="#").news-nav__link 
+							span Смотреть еще
+							i.fas.fa-angle-down
 
+			.right-sidebar.col-lg-1
+
+
+	
 						
 	
 

@@ -1,0 +1,36 @@
+.sidebar-menu {
+    &__item {
+        position: relative;
+    }
+    &__link {
+        display: block;
+        padding:15px 0 15px 70px;
+    }
+
+    &__submenu-link {
+        display: block;
+        padding: 5px 0 5px 80px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    svg {
+        position: absolute;
+        top: 18px;
+        left: 30px;
+        transform: rotate(45deg);
+        transition: .3s;
+    }
+
+    &__item--active {
+
+        svg {
+            transform: rotate(90deg);
+            transition: .3s;
+        }
+    }
+
+    &__submenu-link--active {
+        color:$blue;
+    }
+}

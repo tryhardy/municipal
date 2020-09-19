@@ -6,8 +6,8 @@
         }
     }
 
-    &__item {
-        padding: $marginStandart;
+    &__item {    
+        padding: 20px 79px;
         margin-bottom: 10px;
         background-color:$white;  
         box-shadow: $shadow;  
@@ -39,4 +39,34 @@
         font-weight: 500;
         color: $blue;
     }
+}
+
+.news-nav {
+    &__load-more {
+        .news-nav__link {
+            display: flex;
+            padding: 10px 20px;
+            text-align: center;
+            color: $blue;
+            margin-bottom: -$marginStandart;
+            margin-top: $marginStandart;
+            border: 1px solid $blue;
+            align-items: center;
+            justify-content: center;
+            
+            &:hover {
+                text-decoration: none;
+            }
+
+            i {
+                margin-top:5px;
+                margin-left:$marginSmall;
+            }
+        }
+    }
+}
+
+.navigation {
+    max-width:520px;
+    margin:50px auto;
 }

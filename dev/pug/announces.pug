@@ -1,0 +1,59 @@
+extends layout/minor
+include includes/indexSlider/index
+include includes/indexNew/index
+include includes/announces/index
+include includes/banners/index
+include includes/buttons/index
+
+mixin newsItem()
+	a(href="#")
+		.news__item
+			.news__item-wrapper
+				.news__date 
+					span.date 19 июля 2019, 
+					span.time 12:29
+				.news__title Антон Алиханов встретится с участниками «Балтийского Артека»
+				.news__desc Как сообщили в министерстве природных ресурсов и экологии Калининградской области, проверки садовых некоммерческих товариществ на предмет соблюдения требований к организации водоотведения проведут контрольно-надзорные органы.
+
+block variables
+	-var title = 'Главная'
+
+block content
+	.container
+		.row
+			.left-sidebar.col-lg-3
+			.page-content.col-lg-8
+		
+				.tabs
+					ul.tabs__list
+						li().tabs__item 
+							a(href="/news.html") Новости
+						li().tabs__item.tabs__item--active 
+							a(href="/announces.html") Анонсы
+						li().tabs__item
+							a(href="/announces.html") Объявления
+				.news
+					.news__list
+						- var n=0
+						while n<20
+							- n++
+							+newsItem()
+
+				.navigation
+					.news-nav__load-more
+						a(href="#").news-nav__link 
+							span Смотреть еще
+							i.fas.fa-angle-down
+
+			.right-sidebar.col-lg-1
+
+
+	
+						
+	
+
+
+
+			
+
+	

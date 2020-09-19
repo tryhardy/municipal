@@ -1,4 +1,4 @@
-/*нажатие на кнопку поиска*/
+/*нажатие на кнопку поиска
 (function () {
     let searchBtn = $('.search__button');
     $('.search').on('submit', function(e){
@@ -22,6 +22,34 @@
 
     $('body').on('click', function(e){
         if(e.target === $('.header__search') || e.target === $('.search__input')) {
+            console.log(e.target);
+        }
+    });
+})();*/
+
+/*нажатие на кнопку поиска*/
+(function () {
+    let searchBtn = $('.search__button');
+    searchBtn.on('click', function(e){
+        e.preventDefault();       
+        if(searchBtn.attr('data-status') == 'open') {
+            $('.search').addClass('active');
+            searchBtn.attr('data-status', 'close');
+        } else if (searchBtn.attr('data-status') == 'close') {
+            let formData = $(this).serialize();
+            searchBtn.attr('data-status', 'open');
+        }
+    });
+
+    $('body').keydown(function(e) {
+        if (e.keyCode == 27 && $('.search').hasClass('active')) {
+            $('.search').removeClass('active');
+            searchBtn.attr('data-status', 'open');
+        }
+    });
+
+    $('body').on('click', function(e){
+        if(e.target == $('.header__search') || e.target == $('.search__input')) {
             console.log(e.target);
         }
     });

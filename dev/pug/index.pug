@@ -1,4 +1,4 @@
-extends layout/minor
+extends layout/main
 include includes/indexSlider/index
 include includes/indexNew/index
 include includes/announces/index
@@ -22,6 +22,7 @@ block content
 
 					.news-list
 						.row
+							+indexNew()
 							+indexNew()
 							+indexNew()
 							+indexNew()
@@ -72,7 +73,7 @@ block content
 								+bannersItem()
 								+bannersItem()
 
-			aside.sidebar.col-12.col-md-12.col-lg-4
+			aside.sidebar.col-12.col-md-12.col-lg-3
 				.sidebar__block
 					.important
 						h3.important__title Важное

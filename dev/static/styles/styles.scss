@@ -78,7 +78,9 @@ button { outline: none; }
   width: 100%;
   padding: 0 15px;
 }
-
+.row {
+  justify-content: space-between;
+}
 a {
   transition:.3s;
   color:$black;
@@ -120,6 +122,13 @@ input {
   border: 0;
   box-shadow: $shadow;
   margin-bottom: $marginStandart;
+}
+
+.page-content__title {
+  padding:35px 0;
+  h1 {
+    font-size:22px;
+  }
 }
 
 //Модули
