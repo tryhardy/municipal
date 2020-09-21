@@ -6,16 +6,30 @@ include includes/banners/index
 include includes/buttons/index
 
 mixin newsItem()
-	a(href="#")
-		.news-pics__item
+	.news-pics__item.col-lg-4
+		a(href="/news-detail.html")
 			.news-pics__item-wrapper
 				.news-pics__img
 					img(src='/static/images/content/company-image2.png')
-				.news-pics__date 
-					span.date 19 июля 2019, 
-					span.time 12:29
-				.news-pics__title Антон Алиханов встретится с участниками «Балтийского Артека»
-				.news-pics__desc Как сообщили в министерстве природных ресурсов и экологии Калининградской области, проверки садовых некоммерческих товариществ на предмет соблюдения требований к организации водоотведения проведут контрольно-надзорные органы.
+				.news-pics__content
+					.news-pics__date 
+						span.date 19 июля 2019,
+						span.time 12:29
+					.news-pics__title Антон Алиханов встретится с участниками «Балтийского Артека»
+						span ...
+					
+mixin newsItemWithoutDesc()
+	.news-pics__item
+		a(href="/news-detail.html")
+			.news-pics__item-wrapper
+				.news-pics__img
+					img(src='/static/images/content/company-image2.png')
+				.news-pics__content
+					.news-pics__date 
+						span.date 19 июля 2019
+						span.time 12:29
+					.news-pics__title Антон Алиханов встретится с участниками «Балтийского Артека» 
+						span ...
 
 block variables
 	-var title = 'Главная'
@@ -23,8 +37,8 @@ block variables
 block content
 	.container
 		.row
-			.left-sidebar.col-lg-3
-			.page-content.col-lg-8
+			.left-sidebar.col-lg-1
+			.page-content.col-lg-10
 		
 				.tabs
 					ul.tabs__list
@@ -35,17 +49,21 @@ block content
 						li().tabs__item
 							a(href="/announces.html") Объявления
 				.news-pics
-					.news-pics__list
-						- var n=0
-						while n<10
-							- n++
-							+newsItem()
+					.row
+						.news-pics__important.col-lg-5
+							h3 Главное
+							- var n=0
+							while n<4
+								- n++
+								+newsItemWithoutDesc()
+						.news-pics__list.col-lg-7
+							.row
+								- var n=0
+								while n<21
+									- n++
+									+newsItem()
 
-				.navigation
-					.news-nav__load-more
-						a(href="#").news-nav__link 
-							span Смотреть еще
-							i.fas.fa-angle-down
+				+navigation()
 
 			.right-sidebar.col-lg-1
 

@@ -1,10 +1,32 @@
 .sidebar-menu {
+    transition: 0.2s linear;
+
+    &__open-submenu {
+        border: 0;
+        background-color: 0;
+        position: relative;
+        position: absolute;
+        top: 14px;
+        left: 30px;
+        transition: .3s;
+        background-color:transparent;
+        transform: rotate(45deg);
+    }
+    
     &__item {
         position: relative;
+        transition: 0.2s linear;
     }
     &__link {
         display: block;
         padding:15px 0 15px 70px;
+        transition: 0.2s linear;
+    }
+
+    &__submenu {
+        height: 0;
+        overflow: hidden;
+        transition: 0.2s linear;
     }
 
     &__submenu-link {
@@ -15,18 +37,17 @@
     }
 
     svg {
-        position: absolute;
-        top: 18px;
-        left: 30px;
-        transform: rotate(45deg);
-        transition: .3s;
+
     }
 
     &__item--active {
 
-        svg {
-            transform: rotate(90deg);
+        .sidebar-menu__open-submenu {
             transition: .3s;
+        }
+
+        .sidebar-menu__submenu {
+            
         }
     }
 

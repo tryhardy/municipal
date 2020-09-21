@@ -6,14 +6,10 @@ include includes/banners/index
 include includes/buttons/index
 
 mixin newsItem()
-	a(href="#")
-		.news__item
-			.news__item-wrapper
-				.news__date 
-					span.date 19 июля 2019, 
-					span.time 12:29
-				.news__title Антон Алиханов встретится с участниками «Балтийского Артека»
-				.news__desc Как сообщили в министерстве природных ресурсов и экологии Калининградской области, проверки садовых некоммерческих товариществ на предмет соблюдения требований к организации водоотведения проведут контрольно-надзорные органы.
+	.gallery__item.col-lg-3
+		a(href="#")
+			img.gallery__image(src="/static/images/content/company-image1.png")
+			
 
 block variables
 	-var title = 'Главная'
@@ -27,18 +23,15 @@ block content
 		
 				.page-content__title
 					h1 Галерея
-				.news
-					.news__list
-						- var n=0
-						while n<20
-							- n++
-							+newsItem()
+				.gallery
+					.gallery__list
+						.row
+							- var n=0
+							while n<20
+								- n++
+								+newsItem()
 
-				.navigation
-					.news-nav__load-more
-						a(href="#").news-nav__link 
-							span Смотреть еще
-							i.fas.fa-angle-down
+				+navigation()
 
 			.right-sidebar.col-lg-1
 

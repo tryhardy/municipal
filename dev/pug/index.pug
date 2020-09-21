@@ -62,16 +62,20 @@ block content
 								+bannersItem()
 								+bannersItem()
 								+bannersItem()
-						.banners__slider
-							.slides
-								+bannersItem()
-								+bannersItem()
-								+bannersItem()
-								+bannersItem()
-								+bannersItem()
-								+bannersItem()
-								+bannersItem()
-								+bannersItem()
+						.banners__items
+							.banners__arrows
+								button(value="Назад").banners__arrows-prev Назад
+								button(value="Вперед").banners__arrows-next Вперед
+							.banners__slider
+								.slides
+									+bannersItem()
+									+bannersItem()
+									+bannersItem()
+									+bannersItem()
+									+bannersItem()
+									+bannersItem()
+									+bannersItem()
+									+bannersItem()
 
 			aside.sidebar.col-12.col-md-12.col-lg-3
 				.sidebar__block

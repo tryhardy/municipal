@@ -78,3 +78,45 @@
         }
     });
 })();
+
+(function () {
+    $('.news-slider__list').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+    });
+})();
+
+(function () {
+    $('.slides').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: $('.banners__arrows-prev'),
+        nextArrow: $('.banners__arrows-next'),
+        draggable: true
+    });
+})();
+
+(function () {
+    $('.sidebar-menu__open-submenu').click(function(){
+        let parent = $(this).parent(".sidebar-menu__item");
+        let submenu = parent.children(".sidebar-menu__submenu");
+        let height = submenu.prop('scrollHeight');
+
+        if(parent.hasClass("sidebar-menu__item--active")){
+            parent.removeClass("sidebar-menu__item--active");
+            parent.children(".sidebar-menu__submenu").css('height', '0px');
+            $(this).css('transform', 'rotate(45deg)');
+        } else {
+            parent.addClass("sidebar-menu__item--active");
+            parent.children(".sidebar-menu__submenu").css('height', height);
+            $(this).css('transform', 'rotate(90deg)');
+        }
+    })
+
+})();

@@ -131,5 +131,42 @@ input {
   }
 }
 
+*:focus {
+  outline:none;
+}
+
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+
+  li{
+      margin-right:14px;
+
+      &:last-child {
+          margin-right:0px;
+      }
+  }
+
+  li button{
+      padding: 0;
+      border: 0;
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $blue;
+      opacity:.25;
+      transition:.3s;
+  }
+
+  .slick-active button{
+      opacity:1;
+  }
+}
+
+
 //Модули
 @import "modules/modules";

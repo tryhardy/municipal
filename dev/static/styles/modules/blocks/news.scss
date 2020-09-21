@@ -59,8 +59,16 @@
             }
 
             i {
-                margin-top:5px;
+                margin-top:-5px;
                 margin-left:$marginSmall;
+                width: 20px;
+                height: 20px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    transform: rotate(90deg);
+                }
             }
         }
     }
