@@ -103,8 +103,16 @@ button {
 .content__blocks {
   margin-bottom:$marginMedium;
 
+  @include mobile{
+    margin-bottom:0;
+  }
+
   .row > div{
     padding-right:5px;
+
+    @include tablets {
+      padding-right:15px;
+    }
 
     &:last-child {
       padding-right:15px;
@@ -164,6 +172,10 @@ input {
 
   .slick-active button{
       opacity:1;
+  }
+
+  @include mobile {
+    bottom: 10px;
   }
 }
 

@@ -9,4 +9,8 @@
     a {
         color:$black;
     }
+
+    @include mobile {
+        display: none;
+    }
 }

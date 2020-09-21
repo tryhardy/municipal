@@ -2,11 +2,22 @@
     overflow: hidden;
     background-color:$white;
     margin-bottom:$marginStandart;
+    margin-right: -10px;
+
+    @include desktop {
+        margin-bottom:15px;
+        margin-right: 0;
+    }
 
     &__item-wrapper {
         display: flex;
         max-height: 370px;
         overflow: hidden;
+
+        @include mobile {
+            flex-direction: column;
+            max-height: 100%;
+        }
     }
 
     img {
@@ -14,6 +25,12 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+
+        @include mobile {
+            height: 100%;
+            max-height: 350px;
+            overflow: hidden;
+        }
     }
 
     &__content {
@@ -23,6 +40,11 @@
         flex-direction: column;
         max-width: 50%;
         padding: 0 $marginMedium;
+
+        @include mobile {
+            max-width: 100%;
+            padding: 20px;
+        }
     }
 
     &__date {
@@ -42,6 +64,21 @@
     &__title {
         font-size: $medium;
         margin-bottom: $marginMedium;
+    }
+
+    &__desc {
+        @include desktopHd{
+            display:none;
+        }
+    }
+
+    &__img {
+        @include desktop {
+            max-width: 50%;
+        }
+        @include mobile {
+            max-width: 100%;
+        }
     }
 
     

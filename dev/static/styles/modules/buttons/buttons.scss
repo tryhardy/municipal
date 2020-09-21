@@ -26,7 +26,7 @@
         a {
             display:flex;
             align-items:center;
-            background-color: $white;
+            background-color: $bg;
             padding: $marginStandart;
         }
     }
@@ -40,6 +40,7 @@
             background: transparent;
             width:50%;
             padding: 0;
+            
 
             &:nth-child(2n){
                 padding-left: 10px;
@@ -52,6 +53,8 @@
         a {
             display:block;
             height:100%;
+            background-color: $white;
+            box-shadow: $shadow;
         }
 
         .buttons__icon {
@@ -61,6 +64,65 @@
         .buttons__list {
             display: flex;
             flex-wrap: wrap;
+        }
+    }
+}
+
+.navigation {
+    &__load-more {
+        .navigation__link {
+            display: flex;
+            padding: 10px 20px;
+            text-align: center;
+            color: $blue;
+            margin-bottom: -$marginStandart;
+            margin-top: $marginStandart;
+            border: 1px solid $blue;
+            align-items: center;
+            justify-content: center;
+            
+            &:hover {
+                text-decoration: none;
+            }
+
+            i {
+                margin-top:-5px;
+                margin-left:$marginSmall;
+                width: 20px;
+                height: 20px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    &__back {
+        .navigation__link {
+            display: flex;
+            padding: 10px 20px;
+            text-align: center;
+            color: $blue;
+            margin-bottom: -$marginStandart;
+            margin-top: $marginStandart;
+            border: 1px solid $blue;
+            align-items: center;
+            justify-content: center;
+            
+            &:hover {
+                text-decoration: none;
+            }
+
+            
+            svg {
+                width: 20px;
+                height: 20px;
+                transform: rotate(180deg);
+                margin-right:$marginSmall;
+            }
         }
     }
 }

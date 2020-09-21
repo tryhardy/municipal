@@ -1,0 +1,110 @@
+extends layout/minor
+include includes/indexSlider/index
+include includes/indexNew/index
+include includes/announces/index
+include includes/banners/index
+include includes/buttons/index
+
+mixin newsItem()
+	.news-pics__item.col-lg-4
+		a(href="/news-detail.html")
+			.news-pics__item-wrapper
+				.news-pics__img
+					img(src='/static/images/content/company-image2.png')
+				.news-pics__content
+					.news-pics__date 
+						span.date 19 июля 2019,
+						span.time 12:29
+					.news-pics__title Антон Алиханов встретится с участниками «Балтийского Артека»
+						span ...
+					
+mixin newsItemWithoutDesc()
+	.news-pics__item
+		a(href="/news-detail.html")
+			.news-pics__item-wrapper
+				.news-pics__img
+					img(src='/static/images/content/company-image2.png')
+				.news-pics__content
+					.news-pics__date 
+						span.date 19 июля 2019
+						span.time 12:29
+					.news-pics__title Антон Алиханов встретится с участниками «Балтийского Артека» 
+						span ...
+
+block variables
+	-var title = 'Новость детально'
+
+block content
+	.container
+		.row
+			.left-sidebar.col-xl-3
+			.page-content.col-lg-12.col-xl-8
+				.news-detail
+					h1.news-detail__title Почётный диплом министерства социальной политики Калининградской области «Преодоление»
+					.news-detail__date 
+						span.date 19 июля 2019  , 
+						span.time 12:29
+					.news-detail__pic-wrapper
+						ul.news-detail__socials
+							li.news-detail__social
+								a(href="#").news-detail__social-link
+									i.fab.fa-facebook-f
+							li.news-detail__social
+								a(href="#").news-detail__social-link
+									i.fab.fa-vk
+							li.news-detail__social
+								a(href="#").news-detail__social-link
+									i.fab.fa-twitter
+							li.news-detail__social
+								a(href="#").news-detail__social-link
+									i.fab.fa-odnoklassniki
+							li.news-detail__social
+								a(href="#").news-detail__social-link
+									i.fas.fa-share-alt
+
+						.news-detail__slider
+							.news-detail__slide
+								img.news-detail__image(src='/static/images/content/gallery-pic.jpg')
+							.news-detail__slide
+								img.news-detail__image(src='/static/images/content/gallery-pic.jpg')
+							.news-detail__slide
+								img.news-detail__image(src='/static/images/content/gallery-pic.jpg')
+
+						div.buttons
+							div.buttons__prev
+							div.buttons__next
+					
+					.news-detail__content
+						.news-detail__text
+							p Комитет социальной защиты администрации информирует, что начат приём документов на награждение почётным дипломом министерства социальной политики Калининградской области «Преодоление».
+							p В целях вовлечения граждан с ограниченными возможностями в общественную жизнь, поощрения их активной жизненной позиции и за достигнутые успехи в области предпринимательства и профессионального мастерства, культуры и искусства, народного творчества, физической культуры и спорта утверждён приказ Министерства социальной политики от 04 июля 2018 года № 402 «О Почетном дипломе Министерства социальной политики Калининградской области «Преодоление»».
+							p Почетный диплом является ведомственной наградой Министерства социальной политики Калининградской области и формой поощрения за многолетний, добросовестный труд, активную и результативную профессиональную деятельность и личные достижения в области профессионального мастерства, культуры, искусства и народного творчества, физической культуры и спорта.
+							p Инвалидам, награжденным Почетным дипломом, выплачивается единовременное денежное вознаграждение в размере 30 000 (тридцать тысяч) рублей.
+							p Ходатайства и документы на награждение Почётным дипломом принимаются в комитете социальной защиты по адресу: г. Зеленоградск, пр-т Курортный д. 20, каб. № 3 в будние дни с 09:00 до 18:00, перерыв с 13:00 до 14:00.
+							p Срок подачи документов до 23 октября 2020 г.
+							p Дополнительную информацию можно получить по телефону: 8(40150) 3-21-70
+
+						.news-detail__tags
+							.tags
+								span Теги:
+								ul.tags__list
+									li.tags__item
+										a.tags__link Прием документов
+									li.tags__item
+										a.tags__link Министерство социальной политики
+									li.tags__item
+										a.tags__link Алиханов
+				+navigationBack()
+
+			.right-sidebar.col-xl-1
+
+
+	
+						
+	
+
+
+
+			
+
+	

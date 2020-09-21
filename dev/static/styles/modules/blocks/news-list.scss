@@ -3,14 +3,26 @@
     &__item {
         padding-right:5px;
 
-        &:last-child {
-            padding-right: 15px;
+        @include desktop{
+            &:nth-child(2n){
+                padding-right:15px;
+            }
+            margin-bottom:15px;
+        }
+
+        @include mobile {
+            padding-right:15px;
+            margin-bottom:15px;
         }
     }
 
     &__pic {
         max-height: 200px;
         overflow: hidden;
+
+        @include mobile {
+            max-height: 350px;
+        }
 
         img {
             width: 100%;
@@ -43,6 +55,10 @@
 
     &__title {
         margin-bottom: $marginMedium;
+
+        @include mobile {
+            font-size: 20px;
+        }
     }
 
     &__show-more {

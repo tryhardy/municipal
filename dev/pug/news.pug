@@ -37,8 +37,8 @@ block variables
 block content
 	.container
 		.row
-			.left-sidebar.col-lg-1
-			.page-content.col-lg-10
+			.left-sidebar.col-lg-0.col-xl-1
+			.page-content.col-lg-12.col-xl-10
 		
 				.tabs
 					ul.tabs__list
@@ -50,22 +50,22 @@ block content
 							a(href="/announces.html") Объявления
 				.news-pics
 					.row
-						.news-pics__important.col-lg-5
+						.news-pics__important.col-lg-5.col-xl-5
 							h3 Главное
 							- var n=0
 							while n<4
 								- n++
 								+newsItemWithoutDesc()
-						.news-pics__list.col-lg-7
+						.news-pics__list.col-lg-7.col-xl-7
 							.row
 								- var n=0
-								while n<21
+								while n<18
 									- n++
 									+newsItem()
 
 				+navigation()
 
-			.right-sidebar.col-lg-1
+			.right-sidebar.col-lg-0.col-xl-1
 
 
 	

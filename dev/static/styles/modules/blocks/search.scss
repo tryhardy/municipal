@@ -1,13 +1,17 @@
 .search {
     display: flex;
     transition:all .3s;
+
+    @include mobile {
+        display: none;
+    }
     
     &__button {
         cursor: pointer;
         margin: 0 $marginStandart;
         transition:all .3s;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         
         i {
             transition: .3s;
@@ -32,6 +36,22 @@
             display:none;
         }
     }
+    .search__find {
+        display:none;
+        border: 0;
+        background-color: transparent;
+    }
+
+    .search__find-button {
+        display:none;
+        position: absolute;
+        top: 18px;
+        right: 15px;
+        border: 0;
+        background: transparent;
+        color:$blue;
+    }
+
 }
 
 .active.search {
@@ -57,18 +77,30 @@
             display: block;
             padding: 20px 75px;
         }
-        i {
-            display:block;
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
         
+        
+    }
+
+    .search__find {
+        display:block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
     }
 
     .search__button {
         visibility: hidden;
+    }
+
+    .search__find-button {
+        display:block;
+        position: absolute;
+        top: 18px;
+        right: 15px;
+        border: 0;
+        background: transparent;
+        color: $blue;
     }
 }

@@ -10,6 +10,7 @@ var concat = require('gulp-concat');
 const scripts = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/slick-carousel/slick/slick.min.js',
+  'dev/static/js/vendor/jquery.fancybox.pack.js',
   'dev/static/js/*.js'
 ];
 

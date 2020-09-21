@@ -1,43 +1,26 @@
-/*нажатие на кнопку поиска
-(function () {
-    let searchBtn = $('.search__button');
-    $('.search').on('submit', function(e){
-        e.preventDefault();
-        
-        if(searchBtn.attr('data-status') == 'open') {
-            $('.search').addClass('active');
-            searchBtn.attr('data-status', 'find');
-        } else if (searchBtn.attr('data-status') == 'find') {
-            let formData = $(this).serialize();
-            window.location.href = '/search/?'+formData;
-        }
-    });
-
-    $('body').keydown(function(e) {
-        if (e.keyCode == 27 && $('.search').hasClass('active')) {
-            $('.search').removeClass('active');
-            searchBtn.attr('data-status', 'open');
-        }
-    });
-
-    $('body').on('click', function(e){
-        if(e.target === $('.header__search') || e.target === $('.search__input')) {
-            console.log(e.target);
-        }
-    });
-})();*/
-
 /*нажатие на кнопку поиска*/
 (function () {
     let searchBtn = $('.search__button');
+
     searchBtn.on('click', function(e){
         e.preventDefault();       
         if(searchBtn.attr('data-status') == 'open') {
             $('.search').addClass('active');
             searchBtn.attr('data-status', 'close');
-        } else if (searchBtn.attr('data-status') == 'close') {
-            let formData = $(this).serialize();
+        } else if(searchBtn.attr('data-status') == 'close') {
             searchBtn.attr('data-status', 'open');
+            $('.search').removeClass('active');
+        }
+    });
+
+    $('.search__find').on('click', function(e){
+        e.preventDefault();       
+        if(searchBtn.attr('data-status') == 'open') {
+            $('.search').addClass('active');
+            searchBtn.attr('data-status', 'close');
+        } else if(searchBtn.attr('data-status') == 'close') {
+            searchBtn.attr('data-status', 'open');
+            $('.search').removeClass('active');
         }
     });
 
@@ -49,10 +32,47 @@
     });
 
     $('body').on('click', function(e){
-        if(e.target == $('.header__search') || e.target == $('.search__input')) {
-            console.log(e.target);
+        $('.search').each(function(){
+            if(!$('.search__input input').is(e.target) && searchBtn.attr('data-status') == 'close' && !$('.search__button svg').is(e.target)) {
+                searchBtn.attr('data-status', 'open');
+                $('.search').removeClass('active');
+            }
+        })
+    });
+})();
+
+(function () {
+    $('.menu-mobile').on('click', function(){
+        if(!$('.header__nav').hasClass('active')) {
+            $('.header__nav').addClass('active');
+        } 
+    });
+
+    $('.menu-mobile__close-m').on('click', function(){
+        if($('.header__nav').hasClass('active')) {
+            $('.header__nav').removeClass('active');
+        } 
+    });
+})();
+
+/*Работа мобильного меню*/
+(function () {
+    $('.menu__submenu-icon').on('click', function(){
+        let parent = $(this).closest(".menu__item");
+        let submenu = parent.find(".menu__submenu-list");
+        let height = submenu.prop('scrollHeight');
+        console.log(parent, submenu, height)
+        if(parent.hasClass("menu__item--active")){
+            parent.removeClass("menu__item--active");
+            submenu.css('height', '0px');
+            $(this).css('transform', 'rotate(90deg)');
+        } else {
+            parent.addClass("menu__item--active");
+            submenu.css('height', height);
+            $(this).css('transform', 'rotate(0deg)');
         }
     });
+
 })();
 
 /*Подписка на новости*/
@@ -79,6 +99,7 @@
     });
 })();
 
+/*Слайдер новостей на главной*/
 (function () {
     $('.news-slider__list').slick({
         infinite: true,
@@ -89,6 +110,7 @@
     });
 })();
 
+/*Слайдер баннеров на главной*/
 (function () {
     $('.slides').slick({
         infinite: true,
@@ -98,10 +120,51 @@
         arrows: true,
         prevArrow: $('.banners__arrows-prev'),
         nextArrow: $('.banners__arrows-next'),
-        draggable: true
+        draggable: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+            {
+              breakpoint: 676,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+          ]
     });
 })();
 
+/*Слайдер в деталке новостей*/
+(function () {
+    $('.news-detail__slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: $('.buttons__prev'),
+        nextArrow: $('.buttons__next'),
+        draggable: true,
+        responsive: [
+            {
+                breakpoint: 720,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  arrows: false,
+                }
+              },
+          ]
+    });
+})();
+
+/*Работа меню разделов(левое подменю)*/
 (function () {
     $('.sidebar-menu__open-submenu').click(function(){
         let parent = $(this).parent(".sidebar-menu__item");
@@ -120,3 +183,27 @@
     })
 
 })();
+
+/*Работа меню разделов(левое подменю)*/
+(function () {
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
+})();
+
+/*Выравниваем блоки (Главное) в новостях по высоте*/
+(function () {
+    if($('.news-pics__important')[0].scrollHeight) {
+        let itemsCount = $('.news-pics__important .news-pics__item').length;
+        let height = $('.news-pics__important')[0].scrollHeight - (itemsCount-1)*20;
+        let itemHeight = height/itemsCount;
+        $('.news-pics__important .news-pics__item').each(function(e){
+            $(this).css('height', itemHeight+'px');
+        });
+    }
+})();
+
+
+
+
+

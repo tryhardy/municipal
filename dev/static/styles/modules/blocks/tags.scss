@@ -1,0 +1,35 @@
+.tags {
+    display: flex;
+    margin-top:40px;
+
+    span {
+        display:block;
+        margin-right:20px;
+        font-size:18px;
+        color:$blue;
+    }
+
+    &__list {
+        display:flex;
+        margin-top:-20px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-left:20px;
+        margin-top:20px;
+    }
+
+    &__link {
+        display:block;
+        border: 1px solid $blue;
+        padding: 4px 20px;
+        border-radius: 20px;
+        color: $blue;
+
+        &:hover {
+            background-color: $blue;
+            color:$white;
+        }
+    }
+}

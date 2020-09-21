@@ -1,16 +1,27 @@
 .gallery {
 
+  &__list {
+    .row {
+      margin-top:-20px;
+    }
+  }
+
   &__item {
     padding-right:5px;
     margin-top: 20px;
     max-height: 170px;
     overflow: hidden;
 
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      margin-top: 0px;
+    @include desktop {
+      max-height: 350px;
+      &:nth-child(2n) {
+        padding-right: 15px;
+      }
+    }
+
+    @include tablets {
+      max-height: 400px;
+      padding-right: 15px;
     }
   }
 

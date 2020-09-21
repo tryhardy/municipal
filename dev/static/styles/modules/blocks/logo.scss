@@ -3,8 +3,16 @@
     display: flex;
     align-items: center;
 
+    @include desktop {
+        min-width: 60px;
+    }
+
     a {
         display: flex;
+
+        @include desktop {
+            min-width: 60px;
+        }
     }
     img {
         width: 100%;
@@ -23,4 +31,6 @@
             display: none;
         }
     }
+
+    
 }

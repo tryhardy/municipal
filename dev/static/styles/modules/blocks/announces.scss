@@ -1,4 +1,18 @@
 .announces {
+    @include tablets {
+        &:first-child {
+            margin-top: $marginMedium;
+        }
+        margin-bottom:$marginMedium;
+    }
+
+    @include mobile {
+        &:first-child {
+            margin-top: $marginMedium;
+        }
+        margin-bottom:$marginMedium;
+    }
+
     &__header {
         font-size:$medium;
         margin-bottom: $marginStandart;

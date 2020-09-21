@@ -19,10 +19,20 @@ mixin buttonsItem()
 
 mixin navigation()
     .navigation
-        .news-nav__load-more
-            a(href="#").news-nav__link 
+        .navigation__load-more
+            a(href="#").navigation__link 
                 span Смотреть еще
                 i
-                    <svg viewBox="0 0 100% 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.50666 18C1.37737 18 1.24808 17.949 1.15111 17.8436C0.95394 17.6362 0.95394 17.2996 1.15111 17.0922L8.36875 9.49958L1.14788 1.907C0.950708 1.69959 0.950708 1.36297 1.14788 1.15556C1.34504 0.948147 1.66504 0.948147 1.86221 1.15556L9.43863 9.12556C9.63579 9.33297 9.63579 9.66958 9.43863 9.87699L1.86221 17.8436C1.76524 17.949 1.63595 18 1.50666 18Z" fill="#4141FF" stroke="#4141FF" stroke-width="0.5"/>
                     </svg>
+
+mixin navigationBack()
+    .navigation
+        .navigation__back
+            a(href="#").navigation__link 
+                <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.50666 18C1.37737 18 1.24808 17.949 1.15111 17.8436C0.95394 17.6362 0.95394 17.2996 1.15111 17.0922L8.36875 9.49958L1.14788 1.907C0.950708 1.69959 0.950708 1.36297 1.14788 1.15556C1.34504 0.948147 1.66504 0.948147 1.86221 1.15556L9.43863 9.12556C9.63579 9.33297 9.63579 9.66958 9.43863 9.87699L1.86221 17.8436C1.76524 17.949 1.63595 18 1.50666 18Z" fill="#4141FF" stroke="#4141FF" stroke-width="0.5"/>
+                </svg>
+                span Вернуться в ленту
+                
