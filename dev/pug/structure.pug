@@ -1,0 +1,220 @@
+extends layout/minor
+include includes/indexSlider/index
+include includes/indexNew/index
+include includes/announces/index
+include includes/banners/index
+include includes/buttons/index
+
+mixin newsItem()
+	.gallery__item.col-md-6.col-lg-3.col-xl-3
+		a(class="fancybox" rel="gallery" href="/static/images/content/gallery-pic.jpg")
+			img.gallery__image(src="/static/images/content/gallery-pic.jpg")
+			
+
+block variables
+	-var title = 'Главная'
+
+block content
+	.container
+		.row
+			.left-sidebar.col-lg-3
+				include modules/sidebar/sidebar.pug
+			.page-content.col-lg-8
+		
+				.page-content__title
+					h1 Структура администрации
+				.structure
+					.structure__list
+						.structure__row
+							.structure__column
+								a(href="#" data-id="01").structure__link
+									.structure__content
+										.structure__header Глава города
+										.structure__description Первый заместитель главы администрации
+						.structure__row
+							.structure__column
+								a(href="#" data-id="02").structure__link
+									.structure__content
+										.structure__header Первый заместитель главы администрации
+						.structure__row.structure__row--many
+							.structure__column
+								a(href="#" data-id="03").structure__link
+									.structure__content
+										.structure__header Первый заместитель главы администрации
+							.structure__column
+								a(href="#" data-id="04").structure__link
+									.structure__content
+										.structure__header Первый заместитель главы администрации
+							.structure__column
+								a(href="#" data-id="05").structure__link
+									.structure__content
+										.structure__header Первый заместитель главы администрации
+							.structure__column
+								a(href="#" data-id="06").structure__link
+									.structure__content
+										.structure__header Первый заместитель главы администрации
+							.structure__column
+								a(href="#" data-id="07").structure__link
+									.structure__content
+										.structure__header Первый заместитель главы администрации
+					.structure__popups
+						.structure__popup.structure__popup-id-01
+							.structure__popup-wrapper
+								.structure__popup-close
+									.structure__popup-close-line
+									.structure__popup-close-line
+								.structure__popup-content
+									.structure__popup-header
+										.structure__popup-photo
+											img(src="/static/images/content/company-image4.png")
+										.structure__popup-name
+											h3.structure__popup-title Глава МО "Зеленоградский городской округ"
+											p.structure__popup-desc Кулаков Сергей Васильевич
+									.structure__popup-text
+										p Родился 17 февраля 1963 года в городе Алма-ата республика Казахстан.
+										p С 2003 г. - депутат районного Совета депутатов МО "Зеленоградский район".
+										p С 2006г. по 2010г. -  глава муниципального образования «Ковровское сельское поселение».
+										p С 2010 по 2015 год г. - председатель районного Совета депутатов МО "Зеленоградский район". 
+										p С 2016 года - глава МО "Зеленоградский городской округ".
+										p <b>Почтовый адрес окружного Совета депутатов: 238530, Калининградская область, город Зеленоградск, улица Ленина, дом 20.</b>
+										p <b>Контактные телефоны: телефон/факс 8 (40150) 2 93 15</b>
+										p <b>Согласно Уставу муниципального образования «Зеленоградский городской округ» глава муниципального образования исполняет полномочия председателя окружного Совета депутатов.</b>
+						.structure__popup.structure__popup-id-02
+							.structure__popup-wrapper
+								.structure__popup-close
+									.structure__popup-close-line
+									.structure__popup-close-line
+								.structure__popup-content
+									.structure__popup-header
+										.structure__popup-photo
+											img(src="/static/images/content/company-image4.png")
+										.structure__popup-name
+											h3.structure__popup-title Глава МО "Зеленоградский городской округ"
+											p.structure__popup-desc Кулаков Сергей Васильевич
+									.structure__popup-text
+										p Родился 17 февраля 1963 года в городе Алма-ата республика Казахстан.
+										p С 2003 г. - депутат районного Совета депутатов МО "Зеленоградский район".
+										p С 2006г. по 2010г. -  глава муниципального образования «Ковровское сельское поселение».
+										p С 2010 по 2015 год г. - председатель районного Совета депутатов МО "Зеленоградский район". 
+										p С 2016 года - глава МО "Зеленоградский городской округ".
+										p <b>Почтовый адрес окружного Совета депутатов: 238530, Калининградская область, город Зеленоградск, улица Ленина, дом 20.</b>
+										p <b>Контактные телефоны: телефон/факс 8 (40150) 2 93 15</b>
+										p <b>Согласно Уставу муниципального образования «Зеленоградский городской округ» глава муниципального образования исполняет полномочия председателя окружного Совета депутатов.</b>
+						.structure__popup.structure__popup-id-03
+							.structure__popup-wrapper
+								.structure__popup-close
+									.structure__popup-close-line
+									.structure__popup-close-line
+								.structure__popup-content
+									.structure__popup-header
+										.structure__popup-photo
+											img(src="/static/images/content/company-image4.png")
+										.structure__popup-name
+											h3.structure__popup-title Глава МО "Зеленоградский городской округ"
+											p.structure__popup-desc Кулаков Сергей Васильевич
+									.structure__popup-text
+										p Родился 17 февраля 1963 года в городе Алма-ата республика Казахстан.
+										p С 2003 г. - депутат районного Совета депутатов МО "Зеленоградский район".
+										p С 2006г. по 2010г. -  глава муниципального образования «Ковровское сельское поселение».
+										p С 2010 по 2015 год г. - председатель районного Совета депутатов МО "Зеленоградский район". 
+										p С 2016 года - глава МО "Зеленоградский городской округ".
+										p <b>Почтовый адрес окружного Совета депутатов: 238530, Калининградская область, город Зеленоградск, улица Ленина, дом 20.</b>
+										p <b>Контактные телефоны: телефон/факс 8 (40150) 2 93 15</b>
+										p <b>Согласно Уставу муниципального образования «Зеленоградский городской округ» глава муниципального образования исполняет полномочия председателя окружного Совета депутатов.</b>
+						.structure__popup.structure__popup-id-04
+							.structure__popup-wrapper
+								.structure__popup-close
+									.structure__popup-close-line
+									.structure__popup-close-line
+								.structure__popup-content
+									.structure__popup-header
+										.structure__popup-photo
+											img(src="/static/images/content/company-image4.png")
+										.structure__popup-name
+											h3.structure__popup-title Глава МО "Зеленоградский городской округ"
+											p.structure__popup-desc Кулаков Сергей Васильевич
+									.structure__popup-text
+										p Родился 17 февраля 1963 года в городе Алма-ата республика Казахстан.
+										p С 2003 г. - депутат районного Совета депутатов МО "Зеленоградский район".
+										p С 2006г. по 2010г. -  глава муниципального образования «Ковровское сельское поселение».
+										p С 2010 по 2015 год г. - председатель районного Совета депутатов МО "Зеленоградский район". 
+										p С 2016 года - глава МО "Зеленоградский городской округ".
+										p <b>Почтовый адрес окружного Совета депутатов: 238530, Калининградская область, город Зеленоградск, улица Ленина, дом 20.</b>
+										p <b>Контактные телефоны: телефон/факс 8 (40150) 2 93 15</b>
+										p <b>Согласно Уставу муниципального образования «Зеленоградский городской округ» глава муниципального образования исполняет полномочия председателя окружного Совета депутатов.</b>
+						.structure__popup.structure__popup-id-05
+							.structure__popup-wrapper
+								.structure__popup-close
+									.structure__popup-close-line
+									.structure__popup-close-line
+								.structure__popup-content
+									.structure__popup-header
+										.structure__popup-photo
+											img(src="/static/images/content/company-image4.png")
+										.structure__popup-name
+											h3.structure__popup-title Глава МО "Зеленоградский городской округ"
+											p.structure__popup-desc Кулаков Сергей Васильевич
+									.structure__popup-text
+										p Родился 17 февраля 1963 года в городе Алма-ата республика Казахстан.
+										p С 2003 г. - депутат районного Совета депутатов МО "Зеленоградский район".
+										p С 2006г. по 2010г. -  глава муниципального образования «Ковровское сельское поселение».
+										p С 2010 по 2015 год г. - председатель районного Совета депутатов МО "Зеленоградский район". 
+										p С 2016 года - глава МО "Зеленоградский городской округ".
+										p <b>Почтовый адрес окружного Совета депутатов: 238530, Калининградская область, город Зеленоградск, улица Ленина, дом 20.</b>
+										p <b>Контактные телефоны: телефон/факс 8 (40150) 2 93 15</b>
+										p <b>Согласно Уставу муниципального образования «Зеленоградский городской округ» глава муниципального образования исполняет полномочия председателя окружного Совета депутатов.</b>
+						.structure__popup.structure__popup-id-06
+							.structure__popup-wrapper
+								.structure__popup-close
+									.structure__popup-close-line
+									.structure__popup-close-line
+								.structure__popup-content
+									.structure__popup-header
+										.structure__popup-photo
+											img(src="/static/images/content/company-image4.png")
+										.structure__popup-name
+											h3.structure__popup-title Глава МО "Зеленоградский городской округ"
+											p.structure__popup-desc Кулаков Сергей Васильевич
+									.structure__popup-text
+										p Родился 17 февраля 1963 года в городе Алма-ата республика Казахстан.
+										p С 2003 г. - депутат районного Совета депутатов МО "Зеленоградский район".
+										p С 2006г. по 2010г. -  глава муниципального образования «Ковровское сельское поселение».
+										p С 2010 по 2015 год г. - председатель районного Совета депутатов МО "Зеленоградский район". 
+										p С 2016 года - глава МО "Зеленоградский городской округ".
+										p <b>Почтовый адрес окружного Совета депутатов: 238530, Калининградская область, город Зеленоградск, улица Ленина, дом 20.</b>
+										p <b>Контактные телефоны: телефон/факс 8 (40150) 2 93 15</b>
+										p <b>Согласно Уставу муниципального образования «Зеленоградский городской округ» глава муниципального образования исполняет полномочия председателя окружного Совета депутатов.</b>
+						.structure__popup.structure__popup-id-07
+							.structure__popup-wrapper
+								.structure__popup-close
+									.structure__popup-close-line
+									.structure__popup-close-line
+								.structure__popup-content
+									.structure__popup-header
+										.structure__popup-photo
+											img(src="/static/images/content/company-image4.png")
+										.structure__popup-name
+											h3.structure__popup-title Глава МО "Зеленоградский городской округ"
+											p.structure__popup-desc Кулаков Сергей Васильевич
+									.structure__popup-text
+										p Родился 17 февраля 1963 года в городе Алма-ата республика Казахстан.
+										p С 2003 г. - депутат районного Совета депутатов МО "Зеленоградский район".
+										p С 2006г. по 2010г. -  глава муниципального образования «Ковровское сельское поселение».
+										p С 2010 по 2015 год г. - председатель районного Совета депутатов МО "Зеленоградский район". 
+										p С 2016 года - глава МО "Зеленоградский городской округ".
+										p <b>Почтовый адрес окружного Совета депутатов: 238530, Калининградская область, город Зеленоградск, улица Ленина, дом 20.</b>
+										p <b>Контактные телефоны: телефон/факс 8 (40150) 2 93 15</b>
+										p <b>Согласно Уставу муниципального образования «Зеленоградский городской округ» глава муниципального образования исполняет полномочия председателя окружного Совета депутатов.</b>
+										
+			.right-sidebar.col-lg-1
+
+
+	
+						
+	
+
+
+
+			
+
+	

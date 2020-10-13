@@ -147,51 +147,137 @@
             </div>
             <div class="page-content col-lg-6">
               <div class="page-content__title">
-                <h1>Город</h1>
+                <h1>Интернет-приёмная Губернатора Калининградской области</h1>
               </div>
-              <div class="page-content__wrapper">
-                <p>В режиме удаленной работы учреждений культуры Калининграда мы приобрели новых друзей, привлекли внимание горожан к нашим виртуальным мероприятиям: более 3 тысяч посещений сайтов наших учреждений, 20 тысяч посещений официальных сайтов, выдано 633 издания книг электронных книг и аудиокниг.</p>
-                <p>Мы можем предложить еще больше возможностей</p>
-                <p>Соприкоснуться с историей и искусством:</p>
-                <p>-виртуальный тур по музею «Фридландские ворота» http://fvmuseum.ru/virtual-tour/ . Здесь же видеоклипы, вход в Государственный каталог Российской Федерации музейных предметов, где представлены около 400 предметов из 3 тысяч нашей музейной коллекции.</p>
-                <p>- выставка икон «О,  Русь,  великая, могучая ,  православная!». Мастер Валентина Заколупина (ДК «Чкаловский») https://yadi.sk/i/mqqnMWADT-ryAA</p>
-                <p>- видеообзор готовящегося к открытию Музея книги и его коллекции книг авторов-путешественников http://www.kaliningradlib.ru/node/10862</p>
-                <p>https://m.facebook.com/kaliningradcbs/videos/207211604036634/?refsrc=https%3A%2F%2Fm.facebook.com%2F... https://m.vk.com/wall-32547811_3104</p>
-                <p>- выставка рисунков фронтового разведчика и художника С. И. Чуканова «Он воевал - он рисовал» (ДК «Чкаловский») https://vk.com/wall-188498500_44</p>
-                <p>Познакомиться:</p>
-                <p>- с народным творчеством в новом проекте ДК «Чкаловский» «Русские народные музыкальные инструменты и процессор эффектов BOSS LoopStation RC-300. (По-русски - круговой рекордер)»</p>
+              <div class="feedback">
+                <div class="feedback__description">
+                  <div class="feedback__header">Правила</div>
+                  <p>В соответствии со ст. 7 Федерального закона от 02.05.2006 года № 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации» при направлении обращения в обязательном порядке необходимо указывать фамилию, имя, отчество, почтовый адрес, по которому должен быть направлен ответ, адрес электронной почты, контактный телефон.</p>
+                  <p>Поля, отмеченные <blue>*</blue>, обязательны для заполнения</p>
+                </div>
+                <form class="feedback__form">
+                  <div class="feedback__row">
+                    <div class="error">
+                      <p>* Имя - ошибка</p>
+                      <p>* Фамилия - ошибка</p>
+                    </div>
+                  </div>
+                  <div class="feedback__row feedback__row--center">
+                    <label class="radio">
+                      <input type="radio" value="В письменной форме" name="form_answer"><span>В письменной форме</span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" value="В электронном виде" name="form_answer"><span>В электронном виде</span>
+                    </label>
+                  </div>
+                  <div class="feedback__row">
+                    <div class="feedback__header">Ваша контактная информация</div>
+                    <div class="feedback__small-header">* — обязательные поля</div>
+                  </div>
+                  <div class="feedback__row">
+                    <label><span>Фамилия</span><span class="feedback__required">*</span>
+                      <input type="text" name="form_lastname">
+                    </label>
+                    <label><span>Имя</span><span class="feedback__required">*</span>
+                      <input type="text" name="form_name">
+                    </label>
+                    <label><span>Отчество</span>
+                      <input type="text" name="form_surname">
+                    </label>
+                    <label><span>E-mail</span>
+                      <input type="email" name="form_email"><span class="feedback__input-desc">Для получения информации о статусе регистрации обращения</span>
+                    </label>
+                    <label><span>Контактный телефон</span>
+                      <input type="text" name="form_phone"><span class="feedback__input-desc">В целях объективного и всестороннего рассмотрения Вашего обращения необходимо указать номер контактного телефона для возможных уточнений</span>
+                    </label>
+                  </div>
+                  <div class="feedback__row">
+                    <div class="feedback__header">Почтовый адрес</div>
+                  </div>
+                  <div class="feedback__row feedback__row-3">
+                    <label><span>Индекс</span><span class="feedback__required">*</span>
+                      <input type="text" name="form_index">
+                    </label>
+                    <label><span>Регион</span><span class="feedback__required">*</span>
+                      <input type="text" name="form_region">
+                    </label>
+                    <label><span>Населенный пункт</span><span class="feedback__required">*</span>
+                      <input type="text" name="form_city">
+                    </label>
+                    <label><span>Улица</span><span class="feedback__required">*</span>
+                      <input type="text" name="form_street">
+                    </label>
+                    <label><span>Дом</span><span class="feedback__required">*</span>
+                      <input type="text" name="form_house">
+                    </label>
+                    <label><span>Корпус</span>
+                      <input type="text" name="form_section">
+                    </label>
+                    <label><span>Квартира</span>
+                      <input class="error" type="text" name="form_appartments">
+                    </label>
+                  </div>
+                  <div class="feedback__row">
+                    <div class="feedback__header">Вопрос</div>
+                  </div>
+                  <div class="feedback__row feedback__row--full">
+                    <label><span>Тематика</span>
+                      <input type="text" name="form_theme">
+                    </label>
+                    <label><span>Текст обращения</span><span class="feedback__required">*</span>
+                      <textarea name="form__message"></textarea><span class="feedback__input-desc"><span id="symbol-counter">0 </span><span>&nbsp;из 5 000 знаков</span></span>
+                    </label>
+                  </div>
+                  <div class="feedback__row">
+                    <div class="feedback__header">Вложенные файлы</div>
+                  </div>
+                  <div class="feedback__row feedback__row--full">
+                    <label><span>Прикрепить файл:</span>
+                      <input type="file" name="form__files[]" multiple id="files">
+                      <div class="feedback__file">
+                        <div class="feedback__file-button">Выбрать файл</div><span class="feedback__input-desc" id="file-name">Ничего не выбрано	</span>
+                      </div>
+                      <div class="feedback__file-desc">
+                        <p>Вы можете прикрепить дополнительные документы или материалы, более полно раскрывающие суть Вашего обращения. Имя файла должно быть на английском языке.</p>
+                        <p><b>Отправка нескольких файлов:</b> </p>
+                        <p>Если Вам нужно отправить несколько файлов, рекомендуем сначала заархивировать их в RAR или ZIP архив.</p>
+                        <p>Допустимый тип файла: <b>*.rar, *.zip, *.doc, *.docx, *.rtf, *.pdf, *.jpg</b></p>
+                        <p>Суммарный размер файла <b>не может превышать 10 Мб.</b></p>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="feedback__row">
+                    <div class="feedback__header">Защита от автоматических сообщений	</div>
+                  </div>
+                  <div class="feedback__row feedback__row--full">
+                    <label><span>Введите слово на картинке</span><span class="feedback__required">*</span>
+                      <div class="captcha"><img src="/static/images/content/captcha.png">
+                        <input type="text" name="captcha">
+                      </div>
+                    </label>
+                  </div>
+                  <div class="feedback__row">
+                    <input class="btn" type="submit" name="form__submit">
+                    <div class="success">Сообщение успешно отправлено</div>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="right-sidebar col-lg-3">
               <div class="sidebar__block">
-                <div class="useful">
-                  <h3 class="useful__title">Полезные ссылки</h3>
-                  <ul class="useful__list">
-                    <li class="useful__item"><a class="useful__link" href="#">social.gov39.ru</a>
-                      <p class="useful__desc">Министерство социальной политики КО</p>
-                    </li>
-                    <li class="useful__item"><a class="useful__link" href="#">social.gov39.ru</a>
-                      <p class="useful__desc">Министерство социальной политики КО</p>
-                    </li>
-                    <li class="useful__item"><a class="useful__link" href="#">social.gov39.ru</a>
-                      <p class="useful__desc">Министерство социальной политики КО</p>
-                    </li>
-                    <li class="useful__item"><a class="useful__link" href="#">social.gov39.ru</a>
-                      <p class="useful__desc">Министерство строительства и жилищно-коммунального хозяйства КО</p>
-                    </li>
-                    <li class="useful__item"><a class="useful__link" href="#">social.gov39.ru</a>
-                      <p class="useful__desc">Министерство социальной политики КО</p>
-                    </li>
-                    <li class="useful__item"><a class="useful__link" href="#">social.gov39.ru</a>
-                      <p class="useful__desc">Министерство социальной политики КО</p>
-                    </li>
-                    <li class="useful__item"><a class="useful__link" href="#">social.gov39.ru</a>
-                      <p class="useful__desc">Министерство строительства и жилищно-коммунального хозяйства КО</p>
-                    </li>
-                    <li class="useful__item"><a class="useful__link" href="#">social.gov39.ru</a>
-                      <p class="useful__desc">Министерство регионального контроля (надзора) КО</p>
-                    </li>
-                  </ul>
+                <div class="feedback__description">
+                  <div class="feedback__header">Правила</div>
+                  <p>1. Обращения поступают на рассмотрение в Отдел по работе с обращениями граждан Правительства Калининградской области.</p><br>
+                  <p>1. Обращения поступают на рассмотрение в Отдел по работе с обращениями граждан Правительства Калининградской области.</p><br>
+                  <p>2. Обращения граждан регистрируются в трехдневный срок c момента поступления и рассматриваются в соответствии с Федеральным законом "О порядке рассмотрения обращений граждан Российской Федерации" 59-ФЗ.</p><br>
+                  <p>3. Ответ на обращение направляется в форме электронного документа по адресу электронной почты или в письменной форме по почтовому адресу, указанному в обращении.</p><br>
+                  <p>4. Размер электронного обращения не может превышать 5000 знаков.</p><br>
+                  <p>5. Обращение может содержать вложенные документы и материалы в электронной форме в виде одного файла. Размер файла вложения не может превышать 10 Мб.</p><br>
+                  <p>6. Информация о персональных данных авторов обращений хранится и обрабатывается с соблюдением требований законодательства РФ о персональных данных</p><br>
+                  <p>Выписка из Указа Губернатора Калининградской области от 09 января 2013 года № 3 «О мерах, направленных на обеспечение выполнения государственными гражданскими служащими Правительства Калининградской области, работниками и гражданами обязанностей, предусмотренных Федеральным законом от 27 июля 2006 года № 152-ФЗ «О персональных данных».</p><br>
+                  <p><blue>Телефон для справок:</blue></p>
+                  <p>Информацию о ходе рассмотрения Ваших обращений можно получить по телефону:</p><br>
+                  <p><a class="tel" href="tel:+74012599078">8 (4012) 599-078</a></p>
                 </div>
               </div>
             </div>

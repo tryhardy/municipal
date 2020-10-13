@@ -1,0 +1,201 @@
+extends layout/minor
+include includes/indexSlider/index
+include includes/indexNew/index
+include includes/announces/index
+include includes/banners/index
+include includes/buttons/index
+
+mixin newsItem()
+	.gallery__item.col-md-6.col-lg-3.col-xl-3
+		a(class="fancybox" rel="gallery" href="/static/images/content/gallery-pic.jpg")
+			img.gallery__image(src="/static/images/content/gallery-pic.jpg")
+			
+
+block variables
+	-var title = 'Главная'
+
+block content
+	.container
+		.row
+			.left-sidebar.col-lg-3
+				include modules/sidebar/sidebar.pug
+			.page-content.col-lg-6
+		
+				.page-content__title
+					h1 Интернет-приёмная Губернатора Калининградской области
+				.feedback
+					.feedback__description
+						.feedback__header Правила
+						p В соответствии со ст. 7 Федерального закона от 02.05.2006 года № 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации» при направлении обращения в обязательном порядке необходимо указывать фамилию, имя, отчество, почтовый адрес, по которому должен быть направлен ответ, адрес электронной почты, контактный телефон.
+						p Поля, отмеченные <blue>*</blue>, обязательны для заполнения
+					form.feedback__form
+						.feedback__row
+							.error
+								p * Имя - ошибка
+								p * Фамилия - ошибка
+						.feedback__row.feedback__row--center
+							label.radio
+								input(
+									type="radio"
+									value="В письменной форме"
+									name="form_answer"
+								)
+								span В письменной форме
+							label.radio
+								input(
+									type="radio"
+									value="В электронном виде"
+									name="form_answer"
+								)
+								span В электронном виде
+						.feedback__row
+							.feedback__header Ваша контактная информация
+							.feedback__small-header * — обязательные поля
+						.feedback__row
+							label
+								span Фамилия
+								span.feedback__required *
+								input(
+									type="text"
+									name="form_lastname"
+								)
+							label
+								span Имя
+								span.feedback__required *
+								input(
+									type="text"
+									name="form_name"
+								)
+							label
+								span Отчество
+								input(
+									type="text"
+									name="form_surname"
+								)
+
+							label
+								span E-mail
+								input(
+									type="email"
+									name="form_email"
+								)
+								span.feedback__input-desc Для получения информации о статусе регистрации обращения
+							label
+								span Контактный телефон
+								input(
+									type="text"
+									name="form_phone"
+								)
+								span.feedback__input-desc В целях объективного и всестороннего рассмотрения Вашего обращения необходимо указать номер контактного телефона для возможных уточнений
+						.feedback__row
+							.feedback__header Почтовый адрес
+						.feedback__row.feedback__row-3
+							label
+								span Индекс
+								span.feedback__required *
+								input(
+									type="text"
+									name="form_index"
+								)
+							label
+								span Регион
+								span.feedback__required *
+								input(
+									type="text"
+									name="form_region"
+								)
+							label
+								span Населенный пункт
+								span.feedback__required *
+								input(
+									type="text"
+									name="form_city"
+								)
+							label
+								span Улица
+								span.feedback__required *
+								input(
+									type="text"
+									name="form_street"
+								)
+							label
+								span Дом
+								span.feedback__required *
+								input(
+									type="text"
+									name="form_house"
+								)
+							label
+								span Корпус
+								input(
+									type="text"
+									name="form_section"
+								)
+							label
+								span Квартира
+								input.error(
+									type="text"
+									name="form_appartments"
+								)
+						.feedback__row
+							.feedback__header Вопрос
+						.feedback__row.feedback__row--full
+							label
+								span Тематика
+								input(
+									type="text"
+									name="form_theme"
+								)
+							label
+								span Текст обращения
+								span.feedback__required *
+								textarea(name="form__message")
+								span.feedback__input-desc
+									span#symbol-counter 0 
+									span &nbsp;из 5 000 знаков
+						.feedback__row
+							.feedback__header Вложенные файлы
+						.feedback__row.feedback__row--full
+							label
+								span Прикрепить файл:
+								input(type="file" name="form__files[]" multiple id="files")
+
+								.feedback__file
+									.feedback__file-button Выбрать файл
+									span.feedback__input-desc#file-name Ничего не выбрано	
+
+								.feedback__file-desc
+									p Вы можете прикрепить дополнительные документы или материалы, более полно раскрывающие суть Вашего обращения. Имя файла должно быть на английском языке.
+									p <b>Отправка нескольких файлов:</b> 
+									p Если Вам нужно отправить несколько файлов, рекомендуем сначала заархивировать их в RAR или ZIP архив.
+									p Допустимый тип файла: <b>*.rar, *.zip, *.doc, *.docx, *.rtf, *.pdf, *.jpg</b>
+									p Суммарный размер файла <b>не может превышать 10 Мб.</b>
+						.feedback__row
+							.feedback__header Защита от автоматических сообщений	
+						.feedback__row.feedback__row--full
+							label
+								span Введите слово на картинке
+								span.feedback__required *
+								.captcha
+									img(src="/static/images/content/captcha.png")
+									input(
+										type="text"
+										name="captcha"
+									)
+						.feedback__row
+							input(type="submit" name="form__submit").btn 
+							.success Сообщение успешно отправлено
+
+			.right-sidebar.col-lg-3
+				include modules/sidebar/desc.pug
+
+
+	
+						
+	
+
+
+
+			
+
+	

@@ -1,0 +1,55 @@
+extends layout/minor
+include includes/indexSlider/index
+include includes/indexNew/index
+include includes/announces/index
+include includes/banners/index
+include includes/buttons/index
+
+mixin newsItem()
+	.gallery__item.col-md-6.col-lg-3.col-xl-3
+		a(class="fancybox" rel="gallery" href="/static/images/content/gallery-pic.jpg")
+			img.gallery__image(src="/static/images/content/gallery-pic.jpg")
+			
+
+block variables
+	-var title = 'Главная'
+
+block content
+	.container
+		.row
+			.left-sidebar.col-lg-3
+				include modules/sidebar/sidebar.pug
+			.page-content.col-lg-8
+		
+				.page-content__title
+					h1 Трансляция заседания
+				.translation
+					.translation__info
+						<svg width="22" height="17" viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
+						<path d="M13.5034 8.18799L9.43814 5.60103C9.32431 5.52897 9.18018 5.52416 9.06155 5.58883C8.94366 5.65388 8.87012 5.77805 8.87012 5.91294V11.0869C8.87012 11.2217 8.94366 11.3459 9.06192 11.411C9.11736 11.4413 9.17833 11.4564 9.23968 11.4564C9.30879 11.4564 9.3779 11.4368 9.43814 11.3988L13.5034 8.81181C13.6098 8.74381 13.6745 8.62629 13.6745 8.4999C13.6745 8.37351 13.6098 8.25599 13.5034 8.18799ZM9.60925 10.4139V6.58592L12.6164 8.4999L9.60925 10.4139Z"/>
+						<path d="M21.0652 0H17.3696H4.06522H0.369565C0.165565 0 0 0.165196 0 0.369565V4.43478V8.5V12.5652V16.6304C0 16.8348 0.165565 17 0.369565 17H4.06522H17.3696H21.0652C21.2692 17 21.4348 16.8348 21.4348 16.6304V12.5652V8.5V4.43478V0.369565C21.4348 0.165196 21.2692 0 21.0652 0ZM3.69565 8.13043H0.73913V4.80435H3.69565V8.13043ZM0.73913 8.86957H3.69565V12.1957H0.73913V8.86957ZM4.43478 12.5652V8.5V4.43478V0.73913H17V4.43478V8.5V12.5652V16.2609H4.43478V12.5652ZM20.6957 8.13043H17.7391V4.80435H20.6957V8.13043ZM17.7391 8.86957H20.6957V12.1957H17.7391V8.86957ZM20.6957 0.73913V4.06522H17.7391V0.73913H20.6957ZM0.73913 0.73913H3.69565V4.06522H0.73913V0.73913ZM0.73913 16.2609V12.9348H3.69565V16.2609H0.73913ZM20.6957 16.2609H17.7391V12.9348H20.6957V16.2609Z"/>
+						</svg>
+
+						span Технические требования
+
+				.translation__popup
+					.translation__popup-wrapper
+						.translation__popup-close
+							.translation__popup-close-line
+							.translation__popup-close-line
+						.translation__popup-title Технические требования
+						.translation__popup-text
+							p текст
+
+			.right-sidebar.col-lg-1
+
+
+	
+						
+	
+
+
+
+			
+
+	

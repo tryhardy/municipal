@@ -61,7 +61,7 @@
         let parent = $(this).closest(".menu__item");
         let submenu = parent.find(".menu__submenu-list");
         let height = submenu.prop('scrollHeight');
-        console.log(parent, submenu, height)
+
         if(parent.hasClass("menu__item--active")){
             parent.removeClass("menu__item--active");
             submenu.css('height', '0px');
@@ -191,17 +191,139 @@
     });
 })();
 
+/*Всплывашка в разделе "Структура"*/
+(function(){
+    let links = $(".structure__link");
+    let closeBtns = $(".structure__popup-close");
+    let popup = $(".structure__popup");
+
+    links.on("click", function(e){
+        e.preventDefault();
+        let $this = $(this);
+        let id = $this.attr("data-id");
+       if($(".structure__popup-id-"+ id).hasClass("active")) {
+        $(".structure__popup-id-"+ id).removeClass("active");
+       } else {
+        $(".structure__popup-id-"+ id).addClass("active");
+       }
+    });
+
+    closeBtns.on("click", function(e){
+        let $this = $(this);
+        let parent = $this.closest(".structure__popup");
+        if(parent.hasClass("active")) {
+            parent.removeClass("active");
+        }
+    });
+
+    popup.on("click", function(e){
+        let $this = $(this);
+        if(e.target === $this[0]) {
+            $this.removeClass("active");
+        }
+    });
+
+    $('body').keydown(function(e) {
+        if (e.keyCode == 27) {
+            popup.each(function() {
+                if($(this).hasClass("active")){
+                    $(this).removeClass("active");
+                }
+            });
+        }
+    });
+
+})();
+
+/*Всплывашка в разделе "Трансляции"*/
+(function(){
+    let links = $(".translation__info");
+    let closeBtns = $(".translation__popup-close");
+    let popup = $(".translation__popup");
+
+    $(".translation__info").on("click", function(e){
+        let $this = $(this);
+        if($(".translation__popup").hasClass("active")) {
+            $(".translation__popup").removeClass("active");
+        } else {
+            $(".translation__popup").addClass("active");
+        }
+    });
+
+    closeBtns.on("click", function(e){
+        let $this = $(this);
+        let parent = $this.closest(".translation__popup");
+        if(parent.hasClass("active")) {
+            parent.removeClass("active");
+        }
+    });
+
+    popup.on("click", function(e){
+        let $this = $(this);
+        if(e.target === $this[0]) {
+            $this.removeClass("active");
+        }
+    });
+
+    $('body').keydown(function(e) {
+        if (e.keyCode == 27) {
+            popup.each(function() {
+                if($(this).hasClass("active")){
+                    $(this).removeClass("active");
+                }
+            });
+        }
+    });
+
+})();
+
+
+/*Форма обратной связи*/
+(function () {
+    let radio = $('input[type=radio]');
+
+    radio.on("click", function(){
+        radio.each(function(){
+            let $this = $(this);
+            let parent = $this.closest("label.radio");
+
+                if($this.is(':checked')){
+                    parent.addClass("active");
+                } else {
+                    parent.removeClass("active");
+                }
+        });
+    });
+
+    $(document).on('input', 'textarea[name=form__message]', function () {
+        let symbols = $(this).val().length;
+        $("#symbol-counter").text(symbols);
+    });
+
+    $("#files").on("change", function(){
+        let files = $(this)[0].files;
+
+        if(files.length == 1) {
+            $("#file-name").text(files[0].name);
+        } else {
+            $("#file-name").text("Выбрано файлов: "+ files.length);
+        }
+    });
+})();
+
 /*Выравниваем блоки (Главное) в новостях по высоте*/
 (function () {
-    if($('.news-pics__important')[0].scrollHeight) {
+    let pics = $('.news-pics__important');
+    if(pics) {
         let itemsCount = $('.news-pics__important .news-pics__item').length;
-        let height = $('.news-pics__important')[0].scrollHeight - (itemsCount-1)*20;
+        let height = pics[0].scrollHeight - (itemsCount-1)*20;
         let itemHeight = height/itemsCount;
         $('.news-pics__important .news-pics__item').each(function(e){
             $(this).css('height', itemHeight+'px');
         });
     }
 })();
+
 
 
 

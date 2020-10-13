@@ -55,7 +55,7 @@ svg,
 video,
 textarea { vertical-align: middle; }
 
-textarea { resize: none; }
+textarea { resize: vertical; }
 
 section { position: relative; }
 
@@ -179,6 +179,41 @@ input {
   }
 }
 
+.page-content__wrapper {
+  margin-bottom:60px;
+}
+
+.page-content__wrapper p{
+  margin-bottom:15px;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.translation__info {
+  display:flex;
+  align-items: center;
+  color:$blue;
+  transition:.3s;
+  cursor: pointer;
+  svg {
+    margin-right:15px;
+    fill:$blue;
+    transition: .3s;
+  }
+  span {
+    transition:.3s;
+  }
+
+  &:hover {
+    span {
+      color:gray;
+    }
+
+    svg {
+      fill: gray;
+    }
+  }
+}
 
 //Модули
 @import "modules/modules";

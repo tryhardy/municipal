@@ -1,0 +1,47 @@
+extends layout/minor
+include includes/indexSlider/index
+include includes/indexNew/index
+include includes/announces/index
+include includes/banners/index
+include includes/buttons/index
+
+mixin newsItem()
+	.gallery__item.col-md-6.col-lg-3.col-xl-3
+		a(class="fancybox" rel="gallery" href="/static/images/content/gallery-pic.jpg")
+			img.gallery__image(src="/static/images/content/gallery-pic.jpg")
+			
+
+block variables
+	-var title = 'Главная'
+
+block content
+	.container
+		.row
+			.left-sidebar.col-lg-3
+				include modules/sidebar/sidebar.pug
+			.page-content.col-lg-8
+		
+				.page-content__title
+					h1 Галерея
+				.gallery
+					.gallery__list
+						.row
+							- var n=0
+							while n<20
+								- n++
+								+newsItem()
+
+				+navigation()
+
+			.right-sidebar.col-lg-1
+
+
+	
+						
+	
+
+
+
+			
+
+	
