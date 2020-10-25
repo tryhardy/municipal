@@ -3,7 +3,6 @@
     transition:.3s;
 
     @include desktop {
-        visibility: hidden;
         position: fixed;
         right:-1000px;
         display: flex;
@@ -23,6 +22,11 @@
 .menu__list {
     display: flex;
     justify-content: space-evenly;
+
+    @include  desktop {
+        display: block;
+        text-align: right;
+    }
 }
 
 .menu__item {
@@ -46,6 +50,7 @@
             background-color: white;
             padding-top: 50px;
             box-shadow: $shadow;
+            z-index: 9999;
         }
     }
 }
@@ -145,7 +150,6 @@
     }
 
     .active .menu {
-        visibility: visible;
         position: fixed;
         width: 100%;
         height: 100%;
@@ -162,8 +166,7 @@
         overflow-x: hidden;
 
         &__list {
-            display: block;
-            text-align: right;
+
         }
 
         &__item {
@@ -174,13 +177,17 @@
                     //display: none;
                     position: relative;
                     box-shadow: none;
+
                 }
             }
         }
     }
 
     .menu {
-        visibility: hidden;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
         span {
             display: flex;
             justify-content: flex-end;
@@ -212,12 +219,15 @@
         i {
             color:$blue;
         }
+        .menu__submenu-list a {
+            color:  black;
+        }
     }
 
     .menu-mobile__close-m {
         position: absolute;
         top: 20px;
-        right: 20px;
+        left: 20px;
         width: 40px;
         height: 40px;
         border: 2px solid $blue;

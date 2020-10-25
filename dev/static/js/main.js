@@ -314,7 +314,7 @@
 /*Выравниваем блоки (Главное) в новостях по высоте*/
 (function () {
     let pics = $('.news-pics__important');
-    if(pics) {
+    if(typeof pics[0] !== 'undefined') {
         let itemsCount = $('.news-pics__important .news-pics__item').length;
         let height = pics[0].scrollHeight - (itemsCount-1)*20;
         let itemHeight = height/itemsCount;
@@ -323,6 +323,16 @@
         });
     }
 })();
+
+(function(){
+    let subscribe = $(".subscribe");
+    subscribe.on("submit", function(e){
+        e.preventDefault();
+        subscribe.html("<div class='success'>Подписка оформлена.</div>");
+    });
+}
+
+)();
 
 
 

@@ -6,7 +6,7 @@ include includes/banners/index
 include includes/buttons/index
 
 mixin newsItem()
-	aa(href="/announces-detail.html")
+	a(href="/announces-detail.html")
 		.news__item
 			.news__item-wrapper
 				.news__date 
@@ -28,9 +28,9 @@ block content
 					ul.tabs__list
 						li().tabs__item 
 							a(href="/news.html") Новости
-						li().tabs__item.tabs__item--active 
-							a(href="/announces.html") Анонсы
 						li().tabs__item
+							a(href="/announces.html") Анонсы
+						li().tabs__item.tabs__item--active 
 							a(href="/notices.html") Объявления
 				.news
 					.news__list

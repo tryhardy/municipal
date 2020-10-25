@@ -5,15 +5,24 @@
     left: 0;
     right: 0;
     background-color: #29272766;
+    opacity:0;
+    transition: opacity .3s;
+
 }
 
 .popup.active {
-    display:block;
+    opacity: 1;
+    z-index: 9999;
+    transition: opacity .3s;
+
+    .overlay {
+        opacity: 1;
+    }
 }
 
 .popup {
-    z-index: 9999;
-    display:none;
+    z-index: -9999;
+    opacity:0;
 
     &__close {
         color: white;
@@ -103,6 +112,7 @@
 
     &__label {
         width:100%;
+        max-width:100%;
 
         span {
             display:block;
